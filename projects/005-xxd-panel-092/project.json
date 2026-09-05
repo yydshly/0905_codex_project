@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "slug": "xxd-panel-092",
+  "name": "XXD Panel 092 线描创作工作流研究",
+  "summary": "用钢笔扩展与跨画风两组共十二种创意效果、场景说明和任务配置，理解视觉 Skill 的用法与边界",
+  "source": "https://github.com/nevertoday/xxd-panel-092",
+  "status": "completed",
+  "tags": [
+    "视觉 Skill",
+    "图像工作流",
+    "任务配置"
+  ],
+  "demo": "",
+  "cover": "assets/web-preview.png",
+  "coverAlt": "XXD Panel 092 中文研究网页真实截图：线描风格样张、能力说明与任务配置入口"
+}

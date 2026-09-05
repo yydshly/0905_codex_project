@@ -13,7 +13,7 @@
 按固定编号升序排列。编号从 `001` 开始，归档后保留，不随研究状态重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **4** 个研究项目。
+当前收录 **5** 个研究项目。
 
 | 编号 | 项目 | 研究摘要 | 主题 | 状态 | 上游 | 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -21,6 +21,7 @@
 | 002 | [长内容并行翻译架构研究](./projects/002-translate-book/README.md) | 理解 AI 翻译与脚本编排的分工，梳理分块并行、术语反馈、断点续跑和局部重译架构 | Agent 架构 / 文档翻译 / 任务编排 | 已完成 | [源码](<https://github.com/deusyu/translate-book>) | — |
 | 003 | [wibi-style 视觉风格工作流研究](./projects/003-wibi-style/README.md) | 汇集蜡笔、漫画、复古印刷、牛马宇宙等 28 款视觉风格，以图片或文字需求和风格规则驱动模型生成头像、海报与插画 | Agent Skill / 图像生成 / 视觉工作流 | 已完成 | [源码](<https://github.com/Vieeeeeee/wibi-style>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/003-wibi-style/>) |
 | 004 | [mono-color 设计规则与图像生成工作流研究](./projects/004-mono-color-skill/README.md) | 将配色、构图与字体经验变为 AI 出图规则；用 12 张作者案例、3 张实测图及完整配方说明能力、用途和扩展方向 | 视觉 Skill / 设计系统 / 图像生成 | 已完成 | [源码](<https://github.com/yanliudesign/mono-color-skill>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/004-mono-color-skill/>) |
+| 005 | [XXD Panel 092 线描创作工作流研究](./projects/005-xxd-panel-092/README.md) | 用钢笔扩展与跨画风两组共十二种创意效果、场景说明和任务配置，理解视觉 Skill 的用法与边界 | 视觉 Skill / 图像工作流 / 任务配置 | 已完成 | [源码](<https://github.com/nevertoday/xxd-panel-092>) | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -57,6 +58,14 @@
 将配色、构图与字体经验变为 AI 出图规则；用 12 张作者案例、3 张实测图及完整配方说明能力、用途和扩展方向
 
 [研究详情](./projects/004-mono-color-skill/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/004-mono-color-skill/>)
+
+### 005 · XXD Panel 092 线描创作工作流研究
+
+[![XXD Panel 092 中文研究网页真实截图：线描风格样张、能力说明与任务配置入口](./projects/005-xxd-panel-092/assets/web-preview.png)](./projects/005-xxd-panel-092/README.md)
+
+用钢笔扩展与跨画风两组共十二种创意效果、场景说明和任务配置，理解视觉 Skill 的用法与边界
+
+[研究详情](./projects/005-xxd-panel-092/README.md)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构

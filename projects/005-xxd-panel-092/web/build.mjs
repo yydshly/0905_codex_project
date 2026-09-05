@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root = path.dirname(fileURLToPath(import.meta.url));
+const dist = path.join(root,'dist');
+if (path.resolve(dist) !== path.join(root,'dist')) throw new Error('Invalid build target');
+fs.rmSync(dist,{recursive:true,force:true});
+fs.mkdirSync(dist,{recursive:true});
+for (const file of ['index.html','style.css','app.js','task.mjs','creative.mjs','review-template.csv']) fs.copyFileSync(path.join(root,file),path.join(dist,file));
+fs.mkdirSync(path.join(dist,'assets'));
+for (const file of ['sample-05.png','sample-09.png','creative-atlas.png','medium-atlas.png','UPSTREAM-LICENSE.txt','original-prompt.zh-CN.md','SOURCES.md']) fs.copyFileSync(path.join(root,'../assets',file),path.join(dist,'assets',file));
+fs.copyFileSync(path.join(root,'../notes/creative-atlas-prompt.txt'),path.join(dist,'assets/creative-atlas-prompt.txt'));
+fs.copyFileSync(path.join(root,'../notes/medium-atlas-prompt.txt'),path.join(dist,'assets/medium-atlas-prompt.txt'));
+console.log('005 · 已构建研究网页与任务配置器。');
