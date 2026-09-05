@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf9f5">
+  <meta name="description" content="白板拆书视频工作流研究：通过交互分镜、架构流程与源码证据，理解 AI 如何将长内容制作成知识短视频。">
+  <title>从一本书，到一分钟的理解 · 白板视频工作流研究 008</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./cases.css">
+  <script src="./app.js" defer></script>
+  <script type="module" src="./cases.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="site-header">
+  <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">研</span><span>项目研究集<small>OPEN RESEARCH / 008</small></span></a>
+  <nav aria-label="章节导航"><a href="#examples">先看例子</a><a href="#capabilities">能力</a><a href="#mechanism">原理</a><a href="#roadmap">扩展</a><a href="#value">我们的价值</a></nav>
+  <a class="source-top" href="https://github.com/nutllwhy/whiteboard-book-video-skill">上游仓库 ↗</a>
+</header>
+<main id="main">
+  <section class="hero" id="overview">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> 多模态工作流 / 源码研究</div>
+      <h1>把一段笔记，<br>变成<span class="underline">讲解视频。</span></h1>
+      <p class="hero-intro">这个库是一份给 AI 用的“视频制作说明书”。<br>你给它内容，它指导 AI 写口播、准备配图和声音，<br>再借助其他工具组装成视频。</p>
+      <div class="hero-actions"><a class="button primary" href="#examples">看一个实际场景 <span>↓</span></a><a class="button" href="#mechanism">看懂以后，再读原理 ↗</a></div>
+      <p class="scope"><b>研究范围</b> 已阅读固定版本源码，并开始真实制作实验。<br>已生成七张插画、MiniMax 配音与真实时间字幕，并导出有声视频。</p>
+    </div>
+    <div class="demo-shell">
+      <div class="demo-top"><span><i class="dot"></i> THE WHITEBOARD LAB</span><span>原理交互示意</span></div>
+      <div class="board" id="demo-board" aria-label="白板动画示意">
+        <div class="board-corner">IDEA → STORY → VIDEO</div>
+        <div class="board-ink" id="board-ink">
+          <span class="hand-note" id="scene-label">01 / 提炼观点</span>
+          <h2 id="scene-title">一本书，只讲清<br><em>一个关键问题。</em></h2>
+          <div class="sketch-flow" aria-hidden="true"><div class="sketch-book"><span></span><span></span><span></span></div><b>→</b><div class="sketch-bulb">!</div><b>→</b><div class="sketch-play">▶</div></div>
+          <div class="board-formula" id="scene-formula">内容 × 结构 × 表达</div>
+          <svg class="stickman" viewBox="0 0 100 135" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="48" cy="23" r="15"/><path d="M48 39L46 82M47 50L25 69L13 60M47 51L69 43L80 23M46 82L26 119M46 82L68 118"/></g><path d="M44 26q5 5 10-1" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="demo-caption" id="scene-caption">先有观点，再有画面</div>
+      </div>
+      <div class="demo-controls"><button id="play-demo" class="play-button" type="button" aria-pressed="false">▶ 播放示意</button><div class="demo-progress" aria-hidden="true"><span id="demo-progress"></span></div><output id="scene-counter">01 / 07</output></div>
+      <p class="demo-note">原创 HTML/CSS 示意 · 模拟静态图揭示，非真实手绘笔迹或上游成片</p>
+    </div>
+  </section>
+  <section id="examples" class="examples-section">
+    <div class="section-heading"><div><div class="eyebrow">START HERE / 跟着一个例子看</div><h2>你给它什么，最后能得到什么？</h2></div><p>选一个场景，再点播放。<br>左边是材料与口播，右边是对应画面。</p></div>
+    <div class="case-tabs" role="group" aria-label="选择实际使用场景"><button type="button" data-case="reading" aria-pressed="true">① 读书笔记 → 知识短视频</button><button type="button" data-case="project" aria-pressed="false">② 项目研究 → 架构讲解</button><button type="button" data-case="training" aria-pressed="false">③ 操作说明 → 新人培训</button></div>
+    <div class="case-context" aria-live="polite"><h3 id="case-title"></h3><p id="case-goal"></p></div>
+    <div class="case-workspace">
+      <div class="case-material"><div class="tiny-label">你提供的材料</div><h3 id="case-input-title"></h3><blockquote id="case-input"></blockquote><p class="case-origin" id="case-origin"></p><div class="case-transform">↓ 提炼重点，改写成能读出来的短句</div><h3>整理后的口播与分镜</h3><p class="case-hint">点击任一句，查看那一刻应出现什么画面。</p><div id="case-script" class="case-script" role="group" aria-label="选择口播与分镜"></div><a id="download-case" class="button" href="./samples/reading.md" download>下载这个案例的脚本 ↓</a></div>
+      <div class="case-player"><div class="case-player-top"><span>把这些素材按顺序放在一起</span><b>30 秒内容样例</b></div><div class="case-screen" id="case-screen"><div class="case-drawing" id="case-drawing"><small id="case-shot-label"></small><h3 id="case-shot-title"></h3><div class="case-visual" id="case-visual"></div><p id="case-takeaway"></p></div><div class="case-subtitle" id="case-subtitle"></div></div><div class="case-transport"><button type="button" id="case-prev" aria-label="上一镜">←</button><button type="button" id="case-play" aria-pressed="false">▶ 播放案例</button><button type="button" id="case-next" aria-label="下一镜">→</button><output id="case-time">00:00 / 00:30</output></div><label class="case-seek-label" for="case-seek">拖动查看任意时刻</label><input type="range" id="case-seek" min="0" max="30" step="0.1" value="0" aria-label="案例播放进度（秒）"><p class="case-explanation" id="case-explanation"></p><p class="case-disclosure"><b>这个样例已经做了：</b>具体材料、改写口播、逐镜配图和可播放网页预览。<br><b>还没有做：</b>模型生图、真实配音、音乐与 MP4 导出。这是我们按工作流制作的内容样例，不是上游生成成片。30 秒用于快速看懂流程；上游目标为 60–90 秒。</p></div>
+    </div>
+    <div class="case-after"><div><b>现在看到的变化</b><p>一段连续文字，变成了“说哪句话、放哪张图、什么时候换画面”的制作方案。</p></div><div><b>真正制作视频时</b><p>再用图像工具生成插画、用配音工具读出口播，由渲染工具导出视频。这个库负责指导和组织这些步骤。</p></div><div><b>对我们有什么用</b><p>已经写好的研究、笔记和教程，可以多一个短视频出口；内容越清楚，后续制作越容易检查。</p></div></div>
+    <noscript><p>本页提供读书笔记、项目研究和新人培训三个具体样例。交互案例需启用 JavaScript；下方仍可阅读工作流能力与证据。</p></noscript>
+  </section>
+  <div class="metrics" aria-label="上游目标规格"><div><strong>60–90<span>秒</span></strong><p>目标成片时长</p></div><div><strong>9:16</strong><p>1080 × 1920 竖屏</p></div><div><strong>AI + HTML</strong><p>生成素材 · 本地渲染</p></div><div><strong>MIT</strong><p>上游代码与文档许可</p></div></div>
+
+  <section id="library-proof">
+    <div class="section-heading"><div><div class="eyebrow">实际制作实验 / 有声演示</div><h2>用库的规则做一次，<br>看清它贡献了什么。</h2></div><p>输入：目标太大时容易拖延，<br>可以先从小动作开始。</p></div>
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin-bottom:32px"><video controls playsinline preload="metadata" poster="./media/poster.png" style="width:min(100%,340px);aspect-ratio:9/16;border:1px solid #ccc;border-radius:16px;background:white" aria-label="从小动作开始：79 秒有声视频"><source src="./media/small-steps.mp4" type="video/mp4"></video><div style="flex:1;min-width:240px"><h3>从一句想法，到 79 秒有声视频</h3><p>这是实际经 HyperFrames 导出的 MP4：七张生成插画、渐进揭幕、轻微推近，以及原库脚本生成的字幕。</p><p><b>MiniMax 真实配音已接入。</b>七段音频决定镜头时长；根据服务返回的词级时间戳生成 36 条原文字幕。本版为纯旁白，未加入背景音乐，侧链混音环节尚未验证。</p><p>观察第二镜切入：画面从约 55% 已揭示状态继续展开。这条具体经验来自原库的 render-and-assemble.md。</p><a class="button" href="./media/small-steps.mp4" download>下载有声视频 MP4 ↓</a></div></div>
+    <div class="case-after"><div><b>库提供制作方法</b><p>采用原库的叙事骨架、七镜头慢版、白板三色与参考图延展规范；七张真实插画已生成。写作与生图仍由外部模型执行。</p></div><div><b>库提供可执行字幕脚本</b><p>已直接运行固定版本的 make_subtitles.py，得到 36 条字幕的 HTML 和 GSAP 片段。时间来自 MiniMax 词级时间戳；断句和合并过短字幕由本次适配代码完成。</p></div><div><b>库规定具体装配方式</b><p>工程采用 HyperFrames 0.8.27；独立镜头、首镜从零揭幕、后续从 55% 揭幕、轻推近均按原库规范实现。MiniMax 配音与时间戳替换了原方案中的 seed-audio 与独立 ASR。</p></div></div>
+    <div class="boundary"><span class="boundary-icon" aria-hidden="true">↳</span><div><h3>这次验证的核心</h3><p>检验这套制作规则与字幕脚本能否组织出可交付视频。图像模型、MiniMax、HyperFrames 和 FFmpeg 是它调用的外部能力。上方三个播放器仍是原理示意，本节视频才是实际制作结果。实测发现字幕倒回播放时可能保持隐藏，装配层将入场 opacity 改为 autoAlpha 修复；原脚本与其原始输出均保留。</p></div><a data-source="scripts/make_subtitles.py">查看实际运行的原脚本 ↗</a></div>
+  </section>
+  <section id="capabilities">
+    <div class="section-heading"><div><div class="eyebrow">01 / CAPABILITIES</div><h2>一个视频的制作，<br>被拆成可检查的步骤。</h2></div><p>核心资产是制作流程与经验约束。<br>模型负责生成，工具负责装配，<br>人负责关键阶段的判断。</p></div>
+    <div class="cap-grid">
+      <article class="cap-card"><span class="card-number">01 / CONTENT</span><h3>把内容变成讲述</h3><p>调研资料、提炼观点，产出口播逐字稿、分镜表与逐镜头生图提示词。</p><div class="card-art text-art" aria-hidden="true"><span>钩子</span> → <span>观点</span> → <span>行动</span></div><a data-source="references/script-writing.md">脚本规范 ↗</a></article>
+      <article class="cap-card"><span class="card-number">02 / VISUAL</span><h3>把观点变成画面</h3><p>白板、马克笔、红蓝黑三色和火柴人讲师；通过参考图延展保持系列风格。</p><div class="card-art swatches" aria-hidden="true"><i></i><i></i><i></i><span>留白 ≥ 30%</span></div><a data-source="references/image-prompt.md">图像规范 ↗</a></article>
+      <article class="cap-card"><span class="card-number">03 / AUDIO</span><h3>让知识有声音</h3><p>生成旁白与纯音乐，用真实配音时长安排视频；说话时自动压低背景音乐。</p><div class="card-art waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span>VOICE + BGM</span></div><a data-source="references/audio-music.md">混音规范 ↗</a></article>
+      <article class="cap-card"><span class="card-number">04 / ASSEMBLY</span><h3>把素材装配成片</h3><p>本地编排揭示动效、字幕与镜头，先预览和抽帧，再渲染并混音交付。</p><div class="card-art timeline-art" aria-hidden="true"><i>画面</i><i>字幕</i><i>配音</i></div><a data-source="references/render-and-assemble.md">渲染规范 ↗</a></article>
+    </div>
+    <div class="boundary"><span class="boundary-icon" aria-hidden="true">↳</span><div><h3>能力来自一套协作关系</h3><p>这个仓库不自带图像、语音或视频模型，也没有完整电子书解析器。最终渲染在本地完成；图片与音频服务可能仍需独立账号、费用和额度。</p></div><a data-source="README.md">查看环境依赖 ↗</a></div>
+  </section>
+
+  <section id="mechanism">
+    <div class="section-heading"><div><div class="eyebrow">02 / UNDER THE HOOD</div><h2>沿着素材，走一遍流水线。</h2></div><p>点击任一步，查看输入、输出、<br>实际执行者与实现边界。</p></div>
+    <div class="workflow"><div class="stage-list" role="group" aria-label="选择工作流阶段">
+      <button type="button" data-stage="0" aria-pressed="true" aria-controls="stage-panel"><span>01</span> 调研与脚本 <small>AI</small></button>
+      <button type="button" data-stage="1" aria-pressed="false" aria-controls="stage-panel"><span>02</span> 分镜图生成 <small>图像模型</small></button>
+      <button type="button" data-stage="2" aria-pressed="false" aria-controls="stage-panel"><span>03</span> 配音与时间戳 <small>音频 / ASR</small></button>
+      <button type="button" data-stage="3" aria-pressed="false" aria-controls="stage-panel"><span>04</span> 字幕片段 <small>Python</small></button>
+      <button type="button" data-stage="4" aria-pressed="false" aria-controls="stage-panel"><span>05</span> 动画与渲染 <small>HTML → MP4</small></button>
+      <button type="button" data-stage="5" aria-pressed="false" aria-controls="stage-panel"><span>06</span> 混音与验收 <small>FFmpeg</small></button>
+    </div><article id="stage-panel" class="stage-panel" aria-live="polite"></article></div>
+    <noscript><p>交互流程需要启用 JavaScript。完整链路：AI 编写脚本 → 生成分镜图与配音 → ASR 时间戳 → 字幕片段 → HTML 动画本地渲染 → FFmpeg 混音与验收。具体依据见文末源码。</p></noscript>
+    <div class="insight-grid"><article><span class="tiny-label">关键原理 01</span><h3>“画出来”，其实是揭示图片。</h3><p>CSS 遮罩逐步露出完整分镜图，GSAP 控制时间与推近。开场从空白开始，后续镜头约从已显示 55% 切入。</p><a data-source="references/render-and-assemble.md">查看遮罩与动画代码 ↗</a></article><article><span class="tiny-label">关键原理 02</span><h3>有词级时间戳，还需要对齐工作。</h3><p>字幕脚本接收已整理的 cues，只生成片段和预设高亮。ASR 纠错、原稿对齐、断句和逐字跟读并未由该脚本完成。</p><a data-source="scripts/make_subtitles.py">查看实际脚本 ↗</a></article></div>
+  </section>
+
+  <section id="rhythm" class="rhythm-section">
+    <div class="section-heading"><div><div class="eyebrow">03 / STORY RHYTHM</div><h2>同一个观点，可以有两种节奏。</h2></div><div class="segmented" role="group" aria-label="选择节奏模式"><button type="button" data-mode="slow" aria-pressed="true">慢版 · 从容讲解</button><button type="button" data-mode="dense" aria-pressed="false">高密版 · 短句推进</button></div></div>
+    <div class="rhythm-body"><div class="rhythm-copy" aria-live="polite"><h3 id="mode-title">一个叙事块，一张画面。</h3><p id="mode-desc">把同主题的信息放在一起，用较长停留给观众理解关系的时间。</p><dl class="mode-spec"><div><dt>画面数</dt><dd id="mode-count">6–8 张</dd></div><div><dt>每画面</dt><dd id="mode-duration">6–9 秒</dd></div><div><dt>口播参考</dt><dd id="mode-words">320–380 字</dd></div></dl></div><div class="storyboard-wrap"><div class="storyboard" id="storyboard" aria-label="慢版分镜结构示意"></div><p class="caption">结构示意，不是实际分镜素材。参数为上游建议区间，最终总长须按配音调整，不能直接保证 60–90 秒。</p></div></div>
+  </section>
+
+<section id="scenarios"><div class="section-heading"><div><div class="eyebrow">04 / EXTENDED USE CASES</div><h2>同一种白板效果，<br>可以讲不同的事情。</h2></div><p>优先扩展内容场景：一个问题、几个解释、一个行动。<br>以下区分现有流程适配与额外开发。</p></div><div class="scenario-grid"><article><span>沿用流程；核验功能边界</span><h3>开源项目导读</h3><p>README 与研究结论 → 使用前后对比、能力关系图、步骤。</p><b>例：这个库解决什么问题？</b></article><article><span>沿用流程；保留来源与限制</span><h3>研究成果分享</h3><p>报告与笔记 → 问题、关键发现、意义与结论。</p><b>例：这次研究发现了什么？</b></article><article><span>沿用流程；审阅简化是否准确</span><h3>知识科普</h3><p>概念说明 → 请求路线、命中与未命中对比。</p><b>例：为什么缓存能让程序更快？</b></article><article><span>精确点击教学需额外接入录屏</span><h3>产品使用教程</h3><p>功能说明 → 三步流程、注意事项与完成标志。</p><b>例：第一次使用这个功能，怎么开始？</b></article><article><span>沿用流程；业务负责人核验</span><h3>团队培训</h3><p>SOP → 判断分支、角色分工与处理顺序。</p><b>例：遇到线上故障，先做哪三件事？</b></article><article><span>本项目已完成这一选题的有声案例</span><h3>读书与个人表达</h3><p>笔记与思考 → 情境、观点、例子与行动。</p><b>例：目标太大，怎样迈出第一步？</b></article><article><span>系列素材管理与版本控制需扩展</span><h3>系列课程</h3><p>课程提纲 → 固定角色、配色、开场与收尾。</p><b>例：每集解释一个概念，连续十集</b></article></div><div class="boundary"><div><h3>为每个研究项目增加一段视频导读</h3><p>先看约一分钟视频，理解问题与价值，再读完整文档。可以制作项目介绍片、机制解释片和场景演示片，例如 002 的长内容分块机制。批量生产还需新增内容模板、素材缓存、局部重做和任务管理。</p><p><b>选择原则：</b>解释为什么、是什么、怎样理解，适合白板视频；精确软件操作、真实外观和人物动作，需要录屏、实拍或其他动画工具。</p><p><b>验证范围：</b>目前只完成“小动作开始”有声案例；其他场景是基于实现的适配判断，尚未逐项制作。</p></div></div></section>
+
+  <section id="roadmap">
+    <div class="section-heading"><div><div class="eyebrow">05 / WHAT COMES NEXT</div><h2>从经验流程，走向可复用的系统。</h2></div><span class="tag suggestion">我们的扩展建议 · 尚未实现</span></div>
+    <div class="roadmap"><article><span class="roadmap-step">01</span><div><small>优先 / 降低返工</small><h3>结构化分镜 + 阶段缓存</h3><p>将口播、图像、字幕与时间轴关联到同一镜头 ID。修改一句话，只重新制作受影响的素材。</p></div><span class="roadmap-label">先把流程做稳</span></article><article><span class="roadmap-step">02</span><div><small>优先 / 提升可控性</small><h3>中文独立排版 + 字幕校正</h3><p>插画交给模型，文字交给 HTML/SVG；用原稿校对 ASR，检查断句、溢出与时间重叠。</p></div><span class="roadmap-label">再把表达做准</span></article><article><span class="roadmap-step">03</span><div><small>后续 / 系列化生产</small><h3>服务适配 + 视觉模板</h3><p>替换图像和语音供应商，固定角色、色彩与布局，再逐步扩展多语言、多画幅与元素动画。</p></div><span class="roadmap-label">最后扩大产出</span></article></div>
+    <details><summary>接入我们的 Windows 环境，还需要补什么？<span aria-hidden="true">＋</span></summary><div><p>上游引用 seed-audio、doubao-creative-design 及 HyperFrames 配套 Skill；复制本仓库不等于这些能力已经可用。渲染文档中的 sips 是 macOS 命令，需要换成适用的图片转换工具。</p><p>还需配置 Node.js 22+、FFmpeg、Python 与 faster-whisper，并核验固定的 HyperFrames 0.8.27 工作流。仓库没有提供完整成片工程模板或一键端到端入口。</p><a data-source="references/render-and-assemble.md">渲染依赖依据 ↗</a></div></details>
+  </section>
+
+  <section id="value" class="value-section"><div class="eyebrow">06 / WHY IT MATTERS TO US</div><h2>研究成果，也可以被看见、听见。</h2><p class="value-lead">它为研究总仓库补上一种表达方式：<br>让已经核验的知识，从文档走向视频。</p><div class="value-chain"><div><small>001</small><b>内容来源</b></div><span>→</span><div><small>002</small><b>翻译与理解</b></div><span>→</span><div><small>003 / 004</small><b>视觉设计参考</b></div><span>→</span><div class="chain-current"><small>008</small><b>视频表达</b></div></div><p class="chain-note">建议连接方式；各项目尚未实际打通，003 / 004 仍为已收录的研究方向。</p><div class="experiment"><div><span class="tiny-label">建议的第一个实验</span><h3>用 60 秒，解释长内容并行翻译。</h3><p>以 002 已完成的研究为素材，制作约 7 镜头的架构导读。集中验证中文可读性、声画同步，以及修改一个镜头的返工成本。</p></div><a href="https://github.com/yydshly/0905_codex_project/tree/main/projects/002-translate-book" class="button">查看 002 研究 ↗</a></div></section>
+
+  <section id="evidence" class="evidence-section"><div class="section-heading"><div><div class="eyebrow">07 / EVIDENCE & SCOPE</div><h2>每个判断，都有出处。</h2></div><span class="tag">固定版本 aac0295 · 2026.09.04</span></div><div class="evidence-grid"><div><h3>本轮已经完成</h3><p>阅读 README、主流程、五份参考文档和字幕脚本，核验目录结构与 MIT 许可，制作本研究网页。</p><h3>本轮尚未验证</h3><p>原 seed-audio 供应商、独立 ASR、背景音乐与侧链混音，以及系统性速度和成本评测。上游自述已有两本书的实践经验；该固定版本未附示例成片，不能据此当作我们的复现结果。</p><p class="research-date">研究更新：2026-09-06 · 原理播放器与真实有声 MP4分别标注</p></div><ol class="source-list"><li><a data-source="SKILL.md">主流程与默认约束 <span>SKILL.md ↗</span></a></li><li><a data-source="references/script-writing.md">脚本与叙事结构 <span>script-writing.md ↗</span></a></li><li><a data-source="references/image-prompt.md">图像风格与一致性 <span>image-prompt.md ↗</span></a></li><li><a data-source="references/audio-voice.md">配音与语音识别 <span>audio-voice.md ↗</span></a></li><li><a data-source="references/audio-music.md">音乐与侧链混音 <span>audio-music.md ↗</span></a></li><li><a data-source="references/render-and-assemble.md">动画与本地渲染 <span>render-and-assemble.md ↗</span></a></li><li><a data-source="scripts/make_subtitles.py">实际字幕脚本 <span>make_subtitles.py ↗</span></a></li><li><a data-source="LICENSE">上游 MIT 许可 <span>LICENSE ↗</span></a></li></ol></div></section>
+</main>
+<footer><a class="brand" href="../../">项目研究集 <span>/ 008</span></a><p>理解设计，保留证据，探索可复用的能力。</p><a href="#overview">回到顶部 ↑</a></footer>
+</body>
+</html>

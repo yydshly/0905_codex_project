@@ -1,0 +1,9 @@
+# Local production outputs; published MP4 is web-video.mp4.
+production/small-steps/small-steps.mp4
+production/small-steps/silent-draft.mp4
+production/small-steps/audio/*.wav
+production/small-steps/composition/assets/shot-*.png
+production/small-steps/composition/assets/vo.wav
+production/small-steps/composition/snapshots/
+production/small-steps/draft-transition.png
+production/small-steps/final-frame-*.png

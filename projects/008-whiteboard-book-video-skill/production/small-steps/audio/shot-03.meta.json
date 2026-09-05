@@ -1,0 +1,17 @@
+{
+  "provider": "MiniMax",
+  "model": "speech-2.8-hd",
+  "voice_id": "male-qn-qingse",
+  "extra_info": {
+    "audio_length": 11592,
+    "audio_sample_rate": 32000,
+    "audio_size": 187188,
+    "bitrate": 128000,
+    "word_count": 49,
+    "invisible_character_ratio": 0,
+    "usage_characters": 90,
+    "audio_format": "mp3",
+    "audio_channel": 1
+  },
+  "has_subtitles": true
+}

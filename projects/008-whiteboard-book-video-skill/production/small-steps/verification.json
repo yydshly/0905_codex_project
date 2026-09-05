@@ -1,0 +1,13 @@
+{
+  "resolution": "1080x1920",
+  "fps": 30,
+  "video": "h264",
+  "audio": "aac",
+  "duration_seconds": 79.033333,
+  "voice_seconds": 79.01766666666667,
+  "cue_count": 36,
+  "script_coverage": "all narration characters, punctuation removed",
+  "timing_source": "MiniMax provider word timestamps; not independently ASR-verified",
+  "music": "none; sidechain mixing not exercised",
+  "subtitle_shim": "opacity entrance replaced with autoAlpha after upstream script generation"
+}
