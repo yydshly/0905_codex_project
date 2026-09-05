@@ -1,0 +1,10 @@
+{
+  "capturedAt": "2026-09-05T16:42:22.356Z",
+  "scope": "009 existing capability atlas; not the synthetic lab",
+  "sourceCommit": "267330e1adfc66a718fb65fa6918c1f06d0a689e",
+  "hashes": {
+    "index.html": "72c7a618d37318db6142536c9ee48da204fdd67ad042e0653256c5e0e37e3ab3",
+    "styles.css": "dcc78347f3660545733538d8f51e02cae604ca6c90dd78c2ae2cb805da67ea1a",
+    "app.js": "87b2f2534a27c5515bc9f64d4b01b03ef8ebd0047c5d20aea27a05d8fa854a1f"
+  }
+}

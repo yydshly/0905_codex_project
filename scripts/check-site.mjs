@@ -10,7 +10,8 @@ for(const file of walk(site)){
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
   const link=match[1];
   if(/^(https?:|mailto:|data:)/.test(link))continue;
-  const [relative,anchor]=link.split('#');
+  const [pathAndQuery,anchor]=link.split('#');
+  const relative=pathAndQuery.split('?')[0];
   let target=path.resolve(path.dirname(file),relative||path.basename(file));
   if(fs.existsSync(target)&&fs.statSync(target).isDirectory())target=path.join(target,'index.html');
   if(!target.startsWith(site+path.sep)||!fs.existsSync(target))throw new Error('Broken local link: '+file+' -> '+link);

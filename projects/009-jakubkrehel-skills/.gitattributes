@@ -1,0 +1,8 @@
+# Preserve the exact recorded evidence bytes across platforms.
+web/evidence/** -text -whitespace
+# RUN-001 after.json records these source files byte for byte.
+web/index.html -text whitespace=cr-at-eol,-blank-at-eof
+web/styles.css -text whitespace=cr-at-eol
+web/app.js -text whitespace=cr-at-eol
+web/skill-card.js -text whitespace=cr-at-eol,-blank-at-eof
+web/skill-data.js -text whitespace=cr-at-eol

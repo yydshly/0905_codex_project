@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "name": "英语外刊资源库能力研究",
+    "summary": "梳理当前与历史外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构",
+    "tags": [
+      "内容来源",
+      "文档处理",
+      "英语学习"
+    ],
+    "source": "https://github.com/hehonghui/awesome-english-ebooks"
+  },
+  {
+    "id": "2",
+    "name": "长内容并行翻译架构研究",
+    "summary": "理解 AI 翻译与脚本编排的分工，梳理分块并行、术语反馈、断点续跑和局部重译架构",
+    "tags": [
+      "Agent 架构",
+      "文档翻译",
+      "任务编排"
+    ],
+    "source": "https://github.com/deusyu/translate-book"
+  },
+  {
+    "id": "9",
+    "name": "界面设计与审查 Skills 工作流研究",
+    "summary": "梳理 11 个界面 Skill 的规则分工、证据驱动审查、方案探索与组件边界检查，评估中文适配和质量验证价值",
+    "tags": [
+      "Agent Skills",
+      "界面设计",
+      "质量审查"
+    ],
+    "source": "https://github.com/jakubkrehel/skills"
+  }
+]
