@@ -2,7 +2,7 @@
 
 > 汇集蜡笔、漫画、复古印刷、牛马宇宙等 28 款视觉风格，以图片或文字需求和风格规则驱动模型生成头像、海报与插画。
 
-[返回总索引](../../README.md#项目索引) · [上游项目](<https://github.com/Vieeeeeee/wibi-style>) · [研究笔记](./notes/README.md) · [Web 演示说明](./web/README.md)
+[返回总索引](../../README.md#项目索引) · [上游项目](<https://github.com/Vieeeeeee/wibi-style>) · [研究笔记](./notes/README.md) · [在线演示](https://yydshly.github.io/0905_codex_project/projects/003-wibi-style/) · [Web 演示说明](./web/README.md)
 
 ## 这个库能做什么
 
@@ -32,7 +32,7 @@
 
 ## 图片预览
 
-**新增实际效果演示**：[本地查看三个场景](http://127.0.0.1:4178/projects/003-wibi-style/#generated-demo)。两组图像编辑对照和一张文字海报均为本次内置 image_gen 的实际输出。
+**新增实际效果演示**：[在线查看三个场景](https://yydshly.github.io/0905_codex_project/projects/003-wibi-style/#generated-demo)。两组图像编辑对照和一张文字海报均为本次内置 image_gen 的实际输出。
 
 ![实际效果区真实截图：AI 人物输入与电蓝海报输出](./assets/effects-desktop-v1.png)
 
@@ -69,7 +69,7 @@ node scripts/check-site.mjs
 node projects/003-wibi-style/web/preview.mjs
 ```
 
-打开 [本地预览](http://127.0.0.1:4178/projects/003-wibi-style/)。端口冲突时设置 `WIBI_PREVIEW_PORT`。构建和发布细节见 [Web 说明](./web/README.md)。线上演示尚未验证，`demo` 保持空值。
+打开 [本地预览](http://127.0.0.1:4178/projects/003-wibi-style/)。端口冲突时设置 `WIBI_PREVIEW_PORT`。构建和发布细节见 [Web 说明](./web/README.md)。[GitHub Pages 在线演示](https://yydshly.github.io/0905_codex_project/projects/003-wibi-style/) 已部署并完成线上验证。
 
 ## 实验与结论
 

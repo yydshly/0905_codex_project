@@ -31,6 +31,6 @@ node projects/003-wibi-style/web/preview.mjs
 
 已在实际浏览器检查 1280px 桌面及 390px 手机视口，筛选、详情、复制反馈、Escape 关闭和三条流程均可用，未发现横向溢出。详见 [验证记录](../notes/verification.md)。
 
-使用 GitHub Pages 时，预留路径为 `/0905_codex_project/projects/003-wibi-style/`。路径约定见[部署指南](../../../docs/deployment.md)。
+已部署至 [GitHub Pages](https://yydshly.github.io/0905_codex_project/projects/003-wibi-style/)，稳定路径为 `/0905_codex_project/projects/003-wibi-style/`。路径约定见[部署指南](../../../docs/deployment.md)。
 
-已接入总仓库汇总构建；尚未进行线上部署验证。发布验证后，才将地址写入 `../project.json` 的 `demo` 字段并同步首页。
+已接入总仓库汇总构建。2026-09-05 线上入口、CSS、JavaScript、全览 PNG、独立全览页与实际生成图片均通过 HTTP 检查；浏览器验证 28 张上游示例全部载入。正式地址已写入 `../project.json` 的 `demo` 字段并同步首页。
