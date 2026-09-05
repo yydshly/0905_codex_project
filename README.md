@@ -4,7 +4,9 @@
 
 这里是研究总仓库。首页提供摘要、有序索引和项目预览；详细研究过程、代码与部署说明保存在各子项目中。
 
-[子项目目录](./projects/) · [新增与维护](./docs/project-guide.md) · [Web 部署约定](./docs/deployment.md)
+[在线研究导航](https://yydshly.github.io/0905_codex_project/) · [子项目目录](./projects/) · [新增与维护](./docs/project-guide.md) · [Web 部署约定](./docs/deployment.md)
+
+首个项目：[英语外刊来源与处理研究](https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/)。建议按“内容来源 → 完整架构 → 获取与处理 → 样本证据”阅读；详细笔记与复核方法见子项目。
 
 ## 项目索引
 
@@ -15,7 +17,7 @@
 
 | 编号 | 项目 | 研究摘要 | 主题 | 状态 | 上游 | 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 001 | [英语外刊资源库能力研究](./projects/001-awesome-english-ebooks/README.md) | 整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构 | 内容来源 / 文档处理 / 英语学习 | 已完成 | [源码](<https://github.com/hehonghui/awesome-english-ebooks>) | — |
+| 001 | [英语外刊资源库能力研究](./projects/001-awesome-english-ebooks/README.md) | 整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构 | 内容来源 / 文档处理 / 英语学习 | 已完成 | [源码](<https://github.com/hehonghui/awesome-english-ebooks>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -27,7 +29,7 @@
 
 整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构
 
-[研究详情](./projects/001-awesome-english-ebooks/README.md)
+[研究详情](./projects/001-awesome-english-ebooks/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构

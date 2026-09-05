@@ -1,8 +1,8 @@
 # 001 · 英语外刊资源库能力研究
 
-> awesome-english-ebooks 将英语外刊按刊物和期次整理为可下载的电子书。主要价值在资源组织与交付；当前公开内容不足以复现完整的采集和转换流程。
+> awesome-english-ebooks 将英语外刊按刊物和期次整理为可下载的电子书。主要价值在来源目录与文件交付；当前公开内容不足以复现完整的采集和转换流程。
 
-[返回总索引](../../README.md#项目索引) · [上游项目](https://github.com/hehonghui/awesome-english-ebooks) · [核验记录与来源](./notes/README.md) · [网页构建与部署](./web/README.md) · [来源与处理详解](./notes/source-processing.md)
+[在线研究网页](https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/) · [返回总索引](../../README.md#项目索引) · [上游项目](https://github.com/hehonghui/awesome-english-ebooks) · [核验记录与来源](./notes/README.md) · [网页构建与部署](./web/README.md) · [来源与处理详解](./notes/source-processing.md)
 
 ## 研究概览
 
@@ -14,7 +14,7 @@
 | 公开组成 | Git 目录、Markdown、EPUB / MOBI / PDF、音频 JSON、CSS 和字体 |
 | 研究环境 | Windows、PowerShell、GitHub 网页及 REST API；本仓库管理使用 Node.js 22+ |
 | 上游许可证 | 本次未发现 LICENSE，GitHub 元数据的 license 为 null；未确认资源的再分发或训练授权 |
-| 本轮状态 | 研究网页与完整架构已实现，四本 EPUB 已做结构审计；完整内容处理与学习系统为后续建议 |
+| 本轮状态 | 研究网页与完整架构已发布到 GitHub Pages，四本 EPUB 已做结构审计；完整内容处理与学习系统为后续建议 |
 
 索引资料维护在 [project.json](./project.json)。下文区分已核实事实、实现推测和本仓库建议，不把推荐阅读器的功能记为上游能力。
 

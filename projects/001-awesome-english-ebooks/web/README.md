@@ -1,6 +1,6 @@
 # 研究网页：构建、验证与部署
 
-[返回项目研究](../README.md) · [来源与处理详解](../notes/source-processing.md)
+[在线研究网页](https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/) · [返回项目研究](../README.md) · [来源与处理详解](../notes/source-processing.md)
 
 ## 已实现内容
 
@@ -44,3 +44,7 @@ python -m http.server 8765 --bind 127.0.0.1 --directory _site
 稳定子路径为 `/0905_codex_project/projects/001-awesome-english-ebooks/`。网页使用相对资源路径和页面内锚点，没有依赖服务器回退的 history 路由。正式地址只在实际部署并验证后写入 [project.json](../project.json) 的 `demo` 字段。
 
 这是静态研究站点，不需要数据库、服务端或 API 密钥。部署只上传构建结果，详见[总仓库部署约定](../../../docs/deployment.md)。
+
+## 首次线上验证
+
+2026-09-05，[Pages 工作流](https://github.com/yydshly/0905_codex_project/actions/runs/33966170267)成功发布。导航页、项目首页、CSS、JS、架构 SVG 与样本 JSON 均返回 HTTP 200；线上浏览器确认来源筛选、处理步骤切换正常，无 error / warn。正式链接已写入项目资料并同步外部 README。

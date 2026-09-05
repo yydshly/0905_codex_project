@@ -1,6 +1,6 @@
 # 多个 Web 演示的部署约定
 
-本仓库已配置 GitHub Actions 静态站点构建与发布工作流。正式可访问的项目地址仅在部署验证后写入各子项目的 `project.json`；首页索引据此生成入口。
+本仓库已通过 GitHub Actions 发布[研究导航页](https://yydshly.github.io/0905_codex_project/)与[001 英语外刊研究网页](https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/)，2026-09-05 完成首次线上验证。正式可访问的项目地址仅在部署验证后写入各子项目的 `project.json`；首页索引据此生成入口。
 
 ## GitHub Pages 路径
 
