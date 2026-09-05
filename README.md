@@ -25,7 +25,7 @@
 | 006 | [HumanLayer Skills：五个 Skill 与使用场景](./projects/006-humanlayer-skills/README.md) | 五个可独立使用的 Skill：整理规则、收紧 React 类型、搭建重复任务、设计维护方案、用图解释问题 | Skill 图鉴 / 使用场景 / AI 编程 | 已完成 | [源码](<https://github.com/humanlayer/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/006-humanlayer-skills/>) |
 | 007 | [dzhng/skills 可验证工程工作流研究](./projects/007-dzhng-skills/README.md) | 完整说明 22 个 Skill 的能力、案例与调用时机，用总览图梳理主流程与按需分支，并评估模型增强后的价值 | Agent 工作流 / 技能编排 / 工程验证 | 已完成 | [源码](<https://github.com/dzhng/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/>) |
 | 008 | [白板知识视频制作工作流](./projects/008-whiteboard-book-video-skill/README.md) | 将笔记、观点和教程制作成白板讲解视频：提供叙事与视觉规范、字幕生成脚本和本地装配方法，适用于知识科普、项目导读与培训 | 多模态工作流 / 知识视频 / Agent Skill | 已完成 | [源码](<https://github.com/nutllwhy/whiteboard-book-video-skill>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/>) |
-| 009 | [界面设计与审查 Skills 工作流研究](./projects/009-jakubkrehel-skills/README.md) | 实测界面修复收益有限，尚无 Skill 增量效果证据；借鉴其规则与验证流程，沉淀约束模型的自有网页优化能力 | Agent Skills / 界面设计 / 质量审查 | 已完成 | [源码](<https://github.com/jakubkrehel/skills>) | — |
+| 009 | [界面设计与审查 Skills 工作流研究](./projects/009-jakubkrehel-skills/README.md) | 实测界面修复收益有限，尚无 Skill 增量效果证据；借鉴其规则与验证流程，沉淀约束模型的自有网页优化能力 | Agent Skills / 界面设计 / 质量审查 | 已完成 | [源码](<https://github.com/jakubkrehel/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/009-jakubkrehel-skills/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览

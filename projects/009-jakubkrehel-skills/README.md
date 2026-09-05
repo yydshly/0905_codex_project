@@ -2,7 +2,7 @@
 
 > 研究价值：通过源码与真实页面实验，认识通用界面 Skill 的收益边界；借鉴其组织方法，沉淀我们自己的网页优化规则与验收能力。
 
-[返回总索引](../../README.md#项目索引) · [上游仓库](https://github.com/jakubkrehel/skills) · [源码阅读](./notes/01-source-reading.md) · [验证与实验计划](./notes/02-validation-and-experiments.md)
+[在线能力图谱](https://yydshly.github.io/0905_codex_project/projects/009-jakubkrehel-skills/) · [真实前后对比](https://yydshly.github.io/0905_codex_project/projects/009-jakubkrehel-skills/run.html#visible-difference) · [返回总索引](../../README.md#项目索引) · [上游仓库](https://github.com/jakubkrehel/skills) · [源码阅读](./notes/01-source-reading.md) · [验证与实验计划](./notes/02-validation-and-experiments.md)
 
 ## 研究结论
 
@@ -28,7 +28,7 @@
 | 本轮完成 | 源码研究、规则示意、真实页面局部审查与修复、浏览器复核、最终价值判断 |
 | 尚未验证 | 安装兼容性、宿主自动触发、有无 Skill 的增量收益、发现率、误报率与任务耗时 |
 
-索引中的“已完成”表示本轮研究与限定范围实验已收尾，不代表所有 Skill 已运行验证。本子项目没有复制上游实现。2026-09-06 新增中文交互能力展示页，已完成本地浏览器验证，尚未部署；封面与正式演示地址保持空值。
+索引中的“已完成”表示本轮研究与限定范围实验已收尾，不代表所有 Skill 已运行验证。本子项目没有复制上游实现。2026-09-06 新增中文交互能力展示页，已完成本地与 GitHub Pages 线上验证；正式演示地址已填写，封面保持空值。
 
 ## 一、能力清单
 
@@ -155,7 +155,7 @@ npx skills add jakubkrehel/skills
 
 ## 维护与来源
 
-本子项目包含中文研究文档与零第三方依赖的静态网页。网页支持 11 个技能筛选与搜索、四步流程、五类场景和排版对比示意。运行方式见[网页说明](./web/README.md)。本地启动后可访问 [能力展示页](http://127.0.0.1:4309/0905_codex_project/projects/009-jakubkrehel-skills/)。根目录执行：
+本子项目包含中文研究文档与零第三方依赖的静态网页。网页支持 11 个技能筛选与搜索、四步流程、五类场景和排版对比示意。运行方式见[网页说明](./web/README.md)。可直接访问 [在线能力展示页](https://yydshly.github.io/0905_codex_project/projects/009-jakubkrehel-skills/)。根目录执行：
 
 ```sh
 node scripts/projects.mjs sync
@@ -172,12 +172,16 @@ node scripts/projects.mjs check
 
 2026-09-06 新增研究工作台实验：同一份数据、同一套交互，逐项启用布局、排版、颜色、可访问性、文案与 UI 规则。可搜索、收藏、查看详情、添加临时项目，并切换长标题、空数据、错误与手机容器。
 
-启动本地预览后打开 [规则效果实验室](http://127.0.0.1:4309/0905_codex_project/projects/009-jakubkrehel-skills/lab.html)。实现与启动说明见 [Web 文档](./web/README.md)，实际观察见 [演示验证记录](./notes/03-live-demo.md)。这是选定规则的真实前端实现与验证，尚未进行整套 Skill 的自动效果评测。
+直接打开 [在线规则效果实验室](https://yydshly.github.io/0905_codex_project/projects/009-jakubkrehel-skills/lab.html)。实现与启动说明见 [Web 文档](./web/README.md)，实际观察见 [演示验证记录](./notes/03-live-demo.md)。这是选定规则的真实前端实现与验证，尚未进行整套 Skill 的自动效果评测。
 
 ## RUN-001：一次真实输入到验证的执行记录
 
-现已基于本项目原有能力图谱执行真实审查与修复。启动网页后打开 [RUN-001](http://127.0.0.1:4309/0905_codex_project/projects/009-jakubkrehel-skills/run.html)：原页快照、真实修复、源码差异、组件场景与候选方案均可查看。
+现已基于本项目原有能力图谱执行真实审查与修复。直接打开 [在线 RUN-001](https://yydshly.github.io/0905_codex_project/projects/009-jakubkrehel-skills/run.html)：原页快照、真实修复、源码差异、组件场景与候选方案均可查看。
 
 [详细记录](./web/evidence/report.md)列出五项发现、实际测量与验证。颜色修复仅处理失败的编号文字；已测合格颜色保持不变。编号对比度从约 4.05:1 到 5.87:1；正文变大有信息密度代价，三种候选仍由用户选择。
 
 变更审查使用冻结文件差异，是对上游范围解析的适配，不冒充真实 PR。未执行全库、全站或跨浏览器完整评测。
+
+## 在线发布验证
+
+2026-09-06 已验证 GitHub Pages 上的能力图谱、RUN-001、候选方案、组件场景及相关 CSS、JavaScript、JSON 和差异文件可访问。线上浏览器实际操作了并排空结果场景，确认两侧真实页面与恢复入口正常展示。首页“在线体验”由 project.json 的 demo 字段生成。
