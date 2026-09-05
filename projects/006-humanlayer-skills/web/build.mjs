@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const out=path.join(root,'dist');
+fs.mkdirSync(out,{recursive:true});
+for(const file of ['index.html','styles.css','app.js'])fs.copyFileSync(path.join(root,file),path.join(out,file));
+fs.copyFileSync(path.join(root,'../notes/README.md'),path.join(out,'research.md'));
+fs.copyFileSync(path.join(root,'../notes/upstream-LICENSE.txt'),path.join(out,'upstream-LICENSE.txt'));
+console.log('HumanLayer Skills 展示页构建完成（零第三方依赖）。');

@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "slug": "humanlayer-skills",
+  "name": "HumanLayer Skills：五个 Skill 与使用场景",
+  "summary": "五个可独立使用的 Skill：整理规则、收紧 React 类型、搭建重复任务、设计维护方案、用图解释问题",
+  "source": "https://github.com/humanlayer/skills",
+  "status": "completed",
+  "tags": [
+    "Skill 图鉴",
+    "使用场景",
+    "AI 编程"
+  ],
+  "demo": "",
+  "cover": "assets/five-skills.svg",
+  "coverAlt": "五个独立 Skill 的能力、实际问题与一句话使用场景引导图；原创示意图，非上游产品截图"
+}
