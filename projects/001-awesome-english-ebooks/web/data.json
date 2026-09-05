@@ -215,6 +215,36 @@
       "GitHub Trees API",
       "https://docs.github.com/en/rest/git/trees",
       "版本化文件清单"
+    ],
+    [
+      "历史 README：卫报",
+      "https://github.com/hehonghui/awesome-english-ebooks/blob/3fa67a79b45d8f07eb419ab999ac12d20d3f4722/README.md",
+      "曾明确列入内容分类，当前没有目录"
+    ],
+    [
+      "Nature 提交核验",
+      "https://github.com/hehonghui/awesome-english-ebooks/commit/76408cc0e6b60667762d26871a9927250ea43a04",
+      "提交名与实际文件不一致，不作为收录证据"
     ]
+  ],
+  "sourceScope": [
+    {
+      "name": "经济学人 / 纽约客 / 大西洋月刊 / 连线",
+      "status": "当前收录",
+      "detail": "研究版本中存在四个刊物目录和电子书文件；上方卡片仅统计这一范围。",
+      "evidence": "https://github.com/hehonghui/awesome-english-ebooks/tree/56973cddd86ed77aaa2d489ba4d20bd8ad54914b"
+    },
+    {
+      "name": "The Guardian / 卫报",
+      "status": "历史明确提及",
+      "detail": "2024-07-19 的 README 列有 09_guardian/，说明为每周两期。当前简介仍提到卫报，但当前文件树没有该目录；不当作现有下载入口。",
+      "evidence": "https://github.com/hehonghui/awesome-english-ebooks/blob/3fa67a79b45d8f07eb419ab999ac12d20d3f4722/README.md"
+    },
+    {
+      "name": "Nature / 自然",
+      "status": "待核实线索",
+      "detail": ".gitignore 包含 03_nature/；有提交名 Nature 2025.11.29，但该提交实际只新增经济学人和纽约客文件。不能据此确认公开收录 Nature。",
+      "evidence": "https://github.com/hehonghui/awesome-english-ebooks/commit/76408cc0e6b60667762d26871a9927250ea43a04"
+    }
   ]
 }

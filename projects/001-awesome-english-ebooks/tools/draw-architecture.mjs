@@ -16,7 +16,8 @@ function arrow(y1,y2,dash=false){svg+=`<path d="M815 ${y1} V${y2}" stroke="#8790
 [['fact','已核实'],['unknown','未公开 / 待核验'],['plan','下游建议实现']].forEach(([k,t],i)=>{
 svg+=`<rect x="${45+i*275}" y="126" width="16" height="16" rx="4" fill="${colors[k][0]}" stroke="${colors[k][1]}"/>`+text(70+i*275,141,t,16);
 });
-label(225,'01 / ORIGINS','内容来源','身份已确认；渠道未知');
+svg+=text(235,176,'范围：4 个当前目录；历史 README 提到卫报，Nature 仅有待核实线索。',16,'#69746c');
+label(225,'01 / ORIGINS','当前内容来源','身份已确认；渠道未知');
 box(235,195,275,105,'经济学人',['economist.com','经济 · 商业 · 国际事务']);
 box(530,195,275,105,'纽约客',['newyorker.com','文化 · 报道 · 文学']);
 box(825,195,275,105,'大西洋月刊',['theatlantic.com','社会 · 观点 · 长篇报道']);

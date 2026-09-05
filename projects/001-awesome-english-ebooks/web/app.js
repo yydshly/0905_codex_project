@@ -10,7 +10,7 @@ function filterSources() {
     card.hidden = !matches;
     if (matches) count++;
   });
-  document.querySelector('#source-count').textContent = '显示 '+count+' 个来源 · 数量为固定版本文件统计，不是期次数';
+  document.querySelector('#source-count').textContent = '显示 '+count+' 个当前收录来源 · 数量为固定版本文件统计，不是期次数';
   document.querySelector('#no-results').hidden = count !== 0;
 }
 search.addEventListener('input', filterSources);

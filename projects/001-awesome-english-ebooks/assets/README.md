@@ -4,9 +4,9 @@
 
 | 文件 | 类型 | 来源与说明 |
 | --- | --- | --- |
-| [cover.png](./cover.png) | 真实网页截图 | 2026-09-05，通过浏览器截取本项目本地构建网页首页，用作总仓库封面 |
-| [architecture.svg](./architecture.svg) | 研究架构示意图 | 本项目原创绘制；绿色为已核实结构，橙色为上游未公开环节，蓝色为建议实现的下游流程 |
+| [cover.png](./cover.png) | 真实网页截图 | 2026-09-05，通过浏览器截取本项目本地构建网页首页，保留为网页界面记录，不再作为总仓库封面 |
+| [architecture.svg](./architecture.svg) | 研究架构示意图 | 总仓库 README 封面与网页共用的架构图；本项目原创绘制，绿色为已核实结构，橙色为上游未公开环节，蓝色为建议实现的下游流程 |
 
-架构 SVG 由 [draw-architecture.mjs](../tools/draw-architecture.mjs) 生成，网页构建时自动更新。图像没有使用上游宣传素材。封面展示研究网页，不代表上游应用界面。
+架构 SVG 由 [draw-architecture.mjs](../tools/draw-architecture.mjs) 生成，网页构建时自动更新。图像没有使用上游宣传素材。封面直接展示完整架构，便于从外部 README 理解项目；它是研究示意，不代表全部流程已实现。
 
 上游 EPUB 仅保留在 Git 忽略的本地临时目录用于结构审计，不纳入项目素材或 Pages 产物。

@@ -17,7 +17,7 @@
 
 | 编号 | 项目 | 研究摘要 | 主题 | 状态 | 上游 | 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 001 | [英语外刊资源库能力研究](./projects/001-awesome-english-ebooks/README.md) | 整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构 | 内容来源 / 文档处理 / 英语学习 | 已完成 | [源码](<https://github.com/hehonghui/awesome-english-ebooks>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>) |
+| 001 | [英语外刊资源库能力研究](./projects/001-awesome-english-ebooks/README.md) | 梳理当前与历史外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构 | 内容来源 / 文档处理 / 英语学习 | 已完成 | [源码](<https://github.com/hehonghui/awesome-english-ebooks>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -25,9 +25,9 @@
 <!-- PROJECT_GALLERY:START -->
 ### 001 · 英语外刊资源库能力研究
 
-[![英语外刊来源与处理研究网页首页，展示研究主旨、来源数量及导航；本项目真实截图](./projects/001-awesome-english-ebooks/assets/cover.png)](./projects/001-awesome-english-ebooks/README.md)
+[![英语外刊完整架构示意：内容来源、上游生产边界、文件交付、获取处理与阅读学习；与研究网页使用同一张图](./projects/001-awesome-english-ebooks/assets/architecture.svg)](./projects/001-awesome-english-ebooks/README.md)
 
-整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构
+梳理当前与历史外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构
 
 [研究详情](./projects/001-awesome-english-ebooks/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>)
 <!-- PROJECT_GALLERY:END -->
