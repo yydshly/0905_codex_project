@@ -1,16 +1,18 @@
-# 008 · 白板拆书视频工作流研究
+# 008 · 白板知识视频制作工作流
 
-> 用 79 秒真实有声视频理解制作流程，再看七类扩展场景与能力边界。
+whiteboard-book-video-skill 是一套让 AI 按步骤制作白板知识视频的 Skill。它将笔记、观点、书籍内容或教程，组织成口播、分镜、配图、字幕与本地渲染流程，适合把一个问题或道理讲清楚。
 
-## 先看效果，再理解这个库
+库的核心资产是**制作规范、经验约束和字幕生成脚本**：规定叙事结构、统一白板风格、按配音安排镜头，并给出揭幕动画与成片检查方法。图像与语音由外部服务生成，视频由 HyperFrames 渲染；它不是内置视频模型，也不是开箱即用的视频编辑器。
 
-[![小动作开始：79 秒白板视频真实画面，点击查看视频文件](./assets/video-preview.jpg)](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/#library-proof)
+## 效果演示
 
-**输入想法：目标太大时容易拖延，可以先从小动作开始。** 七张白板插画配合渐进揭幕、轻推近、MiniMax 中文旁白和 36 条字幕，实际导出约 79 秒、1080×1920、30fps 的有声视频。[查看／下载 MP4](./production/small-steps/web-video.mp4)。点击预览图进入[网页播放器](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/#library-proof)，也可下载 MP4。线上页面与视频资源已验证 HTTP 200。
+https://github.com/user-attachments/assets/541c7a53-71cc-46d5-b9fe-ed5ffcb2eef8
 
-这个库贡献的是叙事与白板视觉规范、字幕生成脚本及具体装配经验；图片模型、MiniMax、HyperFrames 是外部能力。本次保留原脚本，补充服务适配、字幕断句与倒回播放的显示修复。纯旁白版本未验证背景音乐与侧链混音。
+**从一句想法到 79 秒有声视频**：输入“目标太大时容易拖延，可以先从小动作开始”，生成七张白板分镜，配合渐进揭幕、轻推近、MiniMax 中文旁白和 36 条字幕。本次实际运行原库字幕脚本，按其规范组装成片；在适配层补充断句与字幕倒回播放修复。未加入背景音乐。
 
-[返回总索引](../../README.md) · [上游仓库](https://github.com/nutllwhy/whiteboard-book-video-skill) · [七类扩展场景](./notes/use-cases.md) · [制作过程与复现命令](./production/small-steps/README.md) · [Web 说明](./web/README.md)
+README 中可直接播放上方视频；[网页演示与制作说明](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/#library-proof)提供同一案例的 1080p 版本。[下载 MP4](./production/small-steps/web-video.mp4)。
+
+[返回总索引](../../README.md) · [上游仓库](https://github.com/nutllwhy/whiteboard-book-video-skill) · [扩展场景](./notes/use-cases.md) · [复现命令与记录](./production/small-steps/README.md)
 
 ## 可以扩展到哪些场景
 

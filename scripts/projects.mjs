@@ -47,6 +47,10 @@ function validateProject(project, folder, checkFiles = true) {
   requireValue(Array.isArray(project.tags) && project.tags.every(singleLine), `${folder}: tags 必须是非空文本组成的数组（可为空数组）。`);
   validateUrl(project.source, `${folder}: source`);
   validateUrl(project.demo, `${folder}: demo`, true);
+  if (project.previewVideo !== undefined) {
+    validateUrl(project.previewVideo, `${folder}: previewVideo`, true);
+    requireValue(!project.previewVideo || /^https:\/\/github\.com\/user-attachments\/assets\/[a-zA-Z0-9-]+$/.test(project.previewVideo), `${folder}: previewVideo 须为已验证的 GitHub 视频附件链接。`);
+  }
   requireValue(typeof project.cover === 'string' && typeof project.coverAlt === 'string', `${folder}: cover 与 coverAlt 须为字符串。`);
   if (project.cover) {
     requireValue(/^assets\/[a-zA-Z0-9_./-]+\.(png|jpe?g|webp|gif|svg)$/i.test(project.cover)
@@ -106,9 +110,10 @@ function renderReadme(original, projects) {
       index.push(`| ${number(project.id)} | [${markdown(project.name)}](${link}) | ${markdown(project.summary)} | ${project.tags.map(markdown).join(' / ') || '—'} | ${statuses[project.status]} | [源码](<${project.source}>) | ${project.demo ? `[在线体验](<${project.demo}>)` : '—'} |`);
     }
   }
-  const gallery = projects.filter((project) => project.cover).map((project) => {
+  const gallery = projects.filter((project) => project.cover || project.previewVideo).map((project) => {
     const prefix = `./projects/${project.folder}`;
-    return `### ${number(project.id)} · ${markdown(project.name)}\n\n[![${markdown(project.coverAlt)}](${prefix}/${project.cover})](${prefix}/README.md)\n\n${markdown(project.summary)}\n\n[研究详情](${prefix}/README.md)${project.demo ? ` · [在线体验](<${project.demo}>)` : ''}`;
+    const preview = project.previewVideo || `[![${markdown(project.coverAlt)}](${prefix}/${project.cover})](${prefix}/README.md)`;
+    return `### ${number(project.id)} · ${markdown(project.name)}\n\n${preview}\n\n${markdown(project.summary)}\n\n[研究详情](${prefix}/README.md)${project.demo ? ` · [在线体验](<${project.demo}>)` : ''}`;
   }).join('\n\n');
   const withIndex = replaceBlock(original, 'PROJECT_INDEX', index.join('\n'));
   return replaceBlock(withIndex, 'PROJECT_GALLERY', gallery || '子项目添加封面后，这里会按编号展示图片、摘要和研究入口。');

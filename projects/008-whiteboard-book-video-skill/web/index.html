@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#faf9f5">
   <meta name="description" content="白板拆书视频工作流研究：通过交互分镜、架构流程与源码证据，理解 AI 如何将长内容制作成知识短视频。">
-  <title>从一本书，到一分钟的理解 · 白板视频工作流研究 008</title>
+  <title>白板知识视频制作工作流 · 能力与实际演示 008</title>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./cases.css">
   <script src="./app.js" defer></script>
@@ -21,9 +21,9 @@
 <main id="main">
   <section class="hero" id="overview">
     <div class="hero-copy">
-      <div class="eyebrow"><span class="dot"></span> 多模态工作流 / 源码研究</div>
-      <h1>把一段笔记，<br>变成<span class="underline">讲解视频。</span></h1>
-      <p class="hero-intro">这个库是一份给 AI 用的“视频制作说明书”。<br>你给它内容，它指导 AI 写口播、准备配图和声音，<br>再借助其他工具组装成视频。</p>
+      <div class="eyebrow"><span class="dot"></span> 制作规范 + 字幕脚本 / 实际复现</div>
+      <h1>把知识内容，<br>做成<span class="underline">白板讲解视频。</span></h1>
+      <p class="hero-intro">这是一套面向 AI 的白板知识视频制作工作流。<br>它提供叙事与视觉规范、字幕脚本和装配方法，<br>把笔记、观点或教程组织成可讲述的视频。</p>
       <div class="hero-actions"><a class="button primary" href="#examples">看一个实际场景 <span>↓</span></a><a class="button" href="#mechanism">看懂以后，再读原理 ↗</a></div>
       <p class="scope"><b>研究范围</b> 已阅读固定版本源码，并开始真实制作实验。<br>已生成七张插画、MiniMax 配音与真实时间字幕，并导出有声视频。</p>
     </div>
@@ -59,7 +59,7 @@
 
   <section id="library-proof">
     <div class="section-heading"><div><div class="eyebrow">实际制作实验 / 有声演示</div><h2>用库的规则做一次，<br>看清它贡献了什么。</h2></div><p>输入：目标太大时容易拖延，<br>可以先从小动作开始。</p></div>
-    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin-bottom:32px"><video controls playsinline preload="metadata" poster="./media/poster.png" style="width:min(100%,340px);aspect-ratio:9/16;border:1px solid #ccc;border-radius:16px;background:white" aria-label="从小动作开始：79 秒有声视频"><source src="./media/small-steps.mp4" type="video/mp4"></video><div style="flex:1;min-width:240px"><h3>从一句想法，到 79 秒有声视频</h3><p>这是实际经 HyperFrames 导出的 MP4：七张生成插画、渐进揭幕、轻微推近，以及原库脚本生成的字幕。</p><p><b>MiniMax 真实配音已接入。</b>七段音频决定镜头时长；根据服务返回的词级时间戳生成 36 条原文字幕。本版为纯旁白，未加入背景音乐，侧链混音环节尚未验证。</p><p>观察第二镜切入：画面从约 55% 已揭示状态继续展开。这条具体经验来自原库的 render-and-assemble.md。</p><a class="button" href="./media/small-steps.mp4" download>下载有声视频 MP4 ↓</a></div></div>
+    <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin-bottom:32px"><video controls playsinline preload="metadata" style="width:min(100%,340px);aspect-ratio:9/16;border:1px solid #ccc;border-radius:16px;background:white" aria-label="从小动作开始：79 秒有声视频"><source src="./media/small-steps.mp4" type="video/mp4"></video><div style="flex:1;min-width:240px"><h3>从一句想法，到 79 秒有声视频</h3><p>这是实际经 HyperFrames 导出的 MP4：七张生成插画、渐进揭幕、轻微推近，以及原库脚本生成的字幕。</p><p><b>MiniMax 真实配音已接入。</b>七段音频决定镜头时长；根据服务返回的词级时间戳生成 36 条原文字幕。本版为纯旁白，未加入背景音乐，侧链混音环节尚未验证。</p><p>观察第二镜切入：画面从约 55% 已揭示状态继续展开。这条具体经验来自原库的 render-and-assemble.md。</p><a class="button" href="./media/small-steps.mp4" download>下载有声视频 MP4 ↓</a></div></div>
     <div class="case-after"><div><b>库提供制作方法</b><p>采用原库的叙事骨架、七镜头慢版、白板三色与参考图延展规范；七张真实插画已生成。写作与生图仍由外部模型执行。</p></div><div><b>库提供可执行字幕脚本</b><p>已直接运行固定版本的 make_subtitles.py，得到 36 条字幕的 HTML 和 GSAP 片段。时间来自 MiniMax 词级时间戳；断句和合并过短字幕由本次适配代码完成。</p></div><div><b>库规定具体装配方式</b><p>工程采用 HyperFrames 0.8.27；独立镜头、首镜从零揭幕、后续从 55% 揭幕、轻推近均按原库规范实现。MiniMax 配音与时间戳替换了原方案中的 seed-audio 与独立 ASR。</p></div></div>
     <div class="boundary"><span class="boundary-icon" aria-hidden="true">↳</span><div><h3>这次验证的核心</h3><p>检验这套制作规则与字幕脚本能否组织出可交付视频。图像模型、MiniMax、HyperFrames 和 FFmpeg 是它调用的外部能力。上方三个播放器仍是原理示意，本节视频才是实际制作结果。实测发现字幕倒回播放时可能保持隐藏，装配层将入场 opacity 改为 autoAlpha 修复；原脚本与其原始输出均保留。</p></div><a data-source="scripts/make_subtitles.py">查看实际运行的原脚本 ↗</a></div>
   </section>

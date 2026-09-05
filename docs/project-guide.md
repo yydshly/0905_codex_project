@@ -29,6 +29,7 @@ node scripts/projects.mjs new --slug project-name --name "项目名称" --source
 | `demo` | 已验证可访问的演示链接；未部署时留空字符串 |
 | `cover` | 相对子项目目录的本地图片路径，如 `assets/cover.webp`；无图时留空 |
 | `coverAlt` | 图片内容说明，设置封面时必填 |
+| `previewVideo` | 可选；已验证的 GitHub 视频附件 URL，在对应项目预览处直接显示播放器，优先于封面 |
 
 | 状态值 | 首页显示 | 含义 |
 | --- | --- | --- |
@@ -63,3 +64,5 @@ node scripts/projects.mjs check
 `sync` 根据项目资料重建首页索引和图片预览。`check` 检查资料格式、编号和目录一致性、重复编号或 slug、项目 README、封面文件以及首页是否已同步；失败时以非零状态退出。远程演示是否可访问需在实际部署后另外验证。
 
 GitHub Actions 在推送与 Pull Request 时自动运行相同校验。提交前，将项目资料和生成后的根 README 一起纳入提交。
+
+视频预览与图片预览同级，统一放在该项目编号下面，不另设首页置顶区。视频须上传为 GitHub user-attachments 附件，并验证 Markdown 渲染产生播放器；普通仓库 MP4 链接不能替代这一验证。设置 previewVideo 后可将 cover 与 coverAlt 留空。

@@ -1,8 +1,8 @@
 {
   "id": 8,
   "slug": "whiteboard-book-video-skill",
-  "name": "白板拆书视频工作流研究",
-  "summary": "用 79 秒真实有声视频理解白板制作流程，整理七类扩展场景、原库贡献与适配边界",
+  "name": "白板知识视频制作工作流",
+  "summary": "将笔记、观点和教程制作成白板讲解视频：提供叙事与视觉规范、字幕生成脚本和本地装配方法，适用于知识科普、项目导读与培训",
   "source": "https://github.com/nutllwhy/whiteboard-book-video-skill",
   "status": "completed",
   "tags": [
@@ -11,6 +11,7 @@
     "Agent Skill"
   ],
   "demo": "https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/",
-  "cover": "assets/video-preview.jpg",
-  "coverAlt": "小动作开始白板视频真实渲染帧：具体行动、MiniMax 旁白字幕与白板插画"
+  "cover": "",
+  "coverAlt": "",
+  "previewVideo": "https://github.com/user-attachments/assets/541c7a53-71cc-46d5-b9fe-ed5ffcb2eef8"
 }
