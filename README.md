@@ -20,7 +20,7 @@
 | 001 | [英语外刊资源库能力研究](./projects/001-awesome-english-ebooks/README.md) | 梳理当前与历史外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构 | 内容来源 / 文档处理 / 英语学习 | 已完成 | [源码](<https://github.com/hehonghui/awesome-english-ebooks>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>) |
 | 002 | [长内容并行翻译架构研究](./projects/002-translate-book/README.md) | 理解 AI 翻译与脚本编排的分工，梳理分块并行、术语反馈、断点续跑和局部重译架构 | Agent 架构 / 文档翻译 / 任务编排 | 已完成 | [源码](<https://github.com/deusyu/translate-book>) | — |
 | 003 | [wibi-style 视觉风格工作流研究](./projects/003-wibi-style/README.md) | 汇集蜡笔、漫画、复古印刷、牛马宇宙等 28 款视觉风格，以图片或文字需求和风格规则驱动模型生成头像、海报与插画 | Agent Skill / 图像生成 / 视觉工作流 | 已完成 | [源码](<https://github.com/Vieeeeeee/wibi-style>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/003-wibi-style/>) |
-| 004 | [mono-color 设计规则与图像生成工作流研究](./projects/004-mono-color-skill/README.md) | 将配色、构图与字体经验变为 AI 出图规则；用 12 张作者案例、3 张实测图及完整配方说明能力、用途和扩展方向 | 视觉 Skill / 设计系统 / 图像生成 | 已完成 | [源码](<https://github.com/yanliudesign/mono-color-skill>) | — |
+| 004 | [mono-color 设计规则与图像生成工作流研究](./projects/004-mono-color-skill/README.md) | 将配色、构图与字体经验变为 AI 出图规则；用 12 张作者案例、3 张实测图及完整配方说明能力、用途和扩展方向 | 视觉 Skill / 设计系统 / 图像生成 | 已完成 | [源码](<https://github.com/yanliudesign/mono-color-skill>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/004-mono-color-skill/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -56,7 +56,7 @@
 
 将配色、构图与字体经验变为 AI 出图规则；用 12 张作者案例、3 张实测图及完整配方说明能力、用途和扩展方向
 
-[研究详情](./projects/004-mono-color-skill/README.md)
+[研究详情](./projects/004-mono-color-skill/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/004-mono-color-skill/>)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构

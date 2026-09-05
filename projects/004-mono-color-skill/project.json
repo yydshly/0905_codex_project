@@ -10,7 +10,7 @@
     "设计系统",
     "图像生成"
   ],
-  "demo": "",
+  "demo": "https://yydshly.github.io/0905_codex_project/projects/004-mono-color-skill/",
   "cover": "assets/overview.png",
   "coverAlt": "mono-color 能力总览：主题输入经过配色、构图、字体与网点规则，生成研究封面、阅读专题、活动海报；含三张实测图片"
 }

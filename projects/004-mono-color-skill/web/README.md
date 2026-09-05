@@ -15,7 +15,7 @@ python -m http.server 8765 --bind 127.0.0.1 --directory projects/004-mono-color-
 
 打开 http://127.0.0.1:8765/。独立预览不提供总项目首页，页脚返回入口需在汇总站点使用。
 
-正式路径遵守 docs/deployment.md：/0905_codex_project/projects/004-mono-color-skill/。没有进行公网发布，project.json 的 demo 保持空值。
+正式路径遵守 docs/deployment.md：/0905_codex_project/projects/004-mono-color-skill/。已于 2026-09-05 经 GitHub Actions 成功发布，正式网页与生成图片返回 HTTP 200；project.json 已填写验证后的演示地址。
 
 ## 本轮验证 / 2026-09-05
 
