@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="mono-color 视觉 Skill 研究：理解设计规则，交互探索能力、我们的使用场景与扩展路径。">
+  <title>mono-color — 把设计经验，变成可执行的规则</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./demos.js"></script>
+  <script defer src="./app.js"></script>
+  <script defer src="./cases-data.js"></script>
+  <script defer src="./showcase.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳至正文</a>
+<header class="topbar">
+  <a class="brand" href="#main"><span class="brand-mark">m.</span> mono-color <span class="brand-sub">研究手记 / 004</span></a>
+  <nav aria-label="页面导航"><a href="#showcase">精选案例</a><a href="#capabilities">能力</a><a href="#process">原理</a><a href="#scenarios">我们的场景</a><a href="#extensions">扩展</a></nav>
+  <a class="source-link" href="https://github.com/yanliudesign/mono-color-skill">上游源码 ↗</a>
+</header>
+<main id="main">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> OPEN SOURCE FIELD NOTES · VOL. 004</div>
+      <h1>把设计经验，<br>变成<span class="underlined">可执行</span><br>的规则。</h1>
+      <p class="lead">一个主题，一套设计配方。<br>让 AI 按配色、构图与字体规则，生成单色或双色编辑视觉。</p>
+      <div class="hero-actions"><a class="button primary" href="#scenarios">探索我们的用法 <span>↗</span></a><a class="text-link" href="#process">它如何工作 ↓</a></div>
+      <p class="hero-note">设计规则由 Skill 组织 · 图片由外部模型生成</p>
+    </div>
+    <div class="real-hero"><img src="./generated/research.png" alt="按 mono-color 规则实际生成的钴蓝陶土双色研究封面"><span>ACTUAL GENERATION / 本次真实生成</span></div>
+  </section>
+  <div class="summary-band"><div class="wrap band-inner"><p><b>核心判断</b>它把审美经验整理为规范，再由 AI 理解并执行。</p><span>规则可复用 ≠ 图片必然可复现</span></div></div>
+
+
+  <!-- AUTHOR_CASES -->
+  <section class="wrap section gallery-section" id="gallery">
+    <div class="section-head"><div><div class="eyebrow">MADE WITH MONO-COLOR / 2026.09.05</div><h2>同一套规则，三种表达。</h2></div><p>实际读取 Skill 与设计目录 → 编写配方 → 调用 image_gen。<br>以下均为本次生成原图，每个主题执行一次。</p></div>
+    <div class="image-gallery">
+      <figure><button class="image-open" data-image="research" aria-label="放大01 / 研究封面"><img src="./generated/research.png" alt="01 / 研究封面实际生成图" loading="lazy"><span>查看原图 ↗</span></button><figcaption><b>01 / 研究封面</b><small>双色 · 程序式字体 · 裁切书本</small></figcaption></figure><figure><button class="image-open" data-image="reading" aria-label="放大02 / 阅读专题"><img src="./generated/reading.png" alt="02 / 阅读专题实际生成图" loading="lazy"><span>查看原图 ↗</span></button><figcaption><b>02 / 阅读专题</b><small>单墨 · 文学字体 · 手部网点</small></figcaption></figure><figure><button class="image-open" data-image="event" aria-label="放大03 / 读书会"><img src="./generated/event.png" alt="03 / 读书会实际生成图" loading="lazy"><span>查看原图 ↗</span></button><figcaption><b>03 / 读书会</b><small>双色 · 公共信息字体 · 椅子与书</small></figcaption></figure>
+    </div><p class="small-note">独立主题生成，未使用作者示例图，也未使用输入照片。这里展示的是按 Skill 执行的样本，不是效果成功率评测。</p>
+  </section>
+  <section id="capabilities" class="wrap section">
+    <div class="section-head"><div><div class="eyebrow">01 / CAPABILITIES</div><h2>它能控制什么？</h2></div><p>从“做得有感觉”，<br>走向能讨论、能检查的设计决策。</p></div>
+    <div class="cap-layout">
+      <div class="cap-menu" role="group" aria-label="选择能力维度">
+        <button class="cap-button active" data-cap="color" aria-pressed="true"><span>01</span>配色与色版 <b>↗</b></button>
+        <button class="cap-button" data-cap="layout" aria-pressed="false"><span>02</span>构图与留白 <b>↗</b></button>
+        <button class="cap-button" data-cap="type" aria-pressed="false"><span>03</span>字体与层级 <b>↗</b></button>
+        <button class="cap-button" data-cap="image" aria-pressed="false"><span>04</span>主体与质感 <b>↗</b></button>
+        <button class="cap-button" data-cap="quality" aria-pressed="false"><span>05</span>交付与检查 <b>↗</b></button>
+      </div>
+      <article class="cap-detail" aria-live="polite">
+        <div class="cap-meta"><span class="pill">上游规范支持</span><span id="cap-count">19 INKS / 10 PALETTES</span></div>
+        <h3 id="cap-title">让每一种墨色，都有自己的职责。</h3>
+        <p id="cap-description">默认使用受控双色：主墨承担主体，辅墨只强调一个明确事件。明确要求单色时，才切换为单墨。</p>
+        <div id="cap-visual" class="cap-visual"><div class="ink-bar"><span>主墨 70–85%</span><span>辅墨 15–30%</span></div><small>纸色不算墨色 · 网点浓淡与叠印混色不等于额外色版</small></div>
+        <p class="boundary"><b>能力边界</b><span id="cap-limit">这些是生成约束，尚不等于可交付印厂的真实分色文件。</span></p>
+      </article>
+    </div>
+    <div class="facts"><div><b>9</b><span>构图家族</span></div><div><b>7</b><span>字体角色</span></div><div><b>3</b><span>节奏配置</span></div><div><b>16</b><span>静态评估案例</span></div></div>
+  </section>
+
+  <section id="process" class="process-section"><div class="wrap section">
+    <div class="section-head"><div><div class="eyebrow">02 / HOW IT WORKS</div><h2>从一句话，走到一张图。</h2></div><p>点击步骤，看清设计规则、<br>Agent 与图像模型分别做什么。</p></div>
+    <div class="steps" role="group" aria-label="生成流程步骤">
+      <button data-step="0" class="step active" aria-pressed="true"><span>01 / INPUT</span><b>理解需求</b><i>→</i></button>
+      <button data-step="1" class="step" aria-pressed="false"><span>02 / RECIPE</span><b>形成配方</b><i>→</i></button>
+      <button data-step="2" class="step" aria-pressed="false"><span>03 / PROMPT</span><b>组织提示词</b><i>→</i></button>
+      <button data-step="3" class="step" aria-pressed="false"><span>04 / IMAGE</span><b>调用图像模型</b><i>→</i></button>
+      <button data-step="4" class="step" aria-pressed="false"><span>05 / REVIEW</span><b>检查与交付</b><i>↗</i></button>
+    </div>
+    <div class="step-detail" aria-live="polite"><span id="step-owner" class="pill">执行者 / Agent</span><h3 id="step-title">先确定必须保留的内容。</h3><p id="step-text">理解主体、意图、准确文字与照片角色。照片可以忠实再现，也可以保留少量识别特征后进行抽象表达。</p></div>
+    <div class="evidence-note"><span>已验证</span><p>两个 Python 校验脚本通过，检查案例数据、设计目录与指定资源。<strong>它们没有调用图像模型，也没有验证实际出图质量。</strong></p></div>
+  </div></section>
+
+  <section id="scenarios" class="wrap section">
+    <div class="section-head"><div><div class="eyebrow">03 / OUR PRACTICE</div><h2>把规则，放进我们的工作。</h2></div><p>切换真实样本，查看输入、配方与检查记录。<br>复制实际执行过的提示词，继续试做。</p></div>
+    <div class="scenario-tabs" role="group" aria-label="选择我们的使用场景">
+      <button data-scene="research" class="active" aria-pressed="true">01 研究封面</button><button data-scene="reading" aria-pressed="false">02 阅读专题</button><button data-scene="event" aria-pressed="false">03 分享活动</button>
+    </div>
+    <div class="scenario-layout">
+      <div class="preview-column actual-preview">
+        <button class="image-open" id="result-open" aria-label="放大当前生成结果"><img id="result-image" src="./generated/research.png" alt="研究封面实际生成图"><span>放大检查网点与文字 ↗</span></button>
+        <div id="result-inks" class="result-inks"></div>
+        <p id="result-review" class="preview-caption"></p>
+        <a id="result-download" class="text-link" href="./generated/research.png" download>下载生成原图 ↓</a>
+      </div>
+      <div class="scenario-copy" aria-live="polite">
+        <span class="pill">我们的应用建议</span><h3 id="scene-title">给每份研究，一个清晰的视觉入口。</h3><p id="scene-description">将项目主题提炼成一个视觉隐喻，沿用编号、标题和配色，形成持续积累的研究封面系列。</p>
+        <dl class="scene-facts"><div><dt>我们提供</dt><dd id="scene-input">项目名称、编号、已确认的研究主题。</dd></div><div><dt>Skill 承担</dt><dd id="scene-skill">选择视觉主体、构图和印刷质感，组织生成提示词。</dd></div><div><dt>我们补齐</dt><dd id="scene-extra">程序准确叠加中文标题；概念封面与真实运行截图分别标注。</dd></div></dl>
+        <label for="request-text" class="request-label">实际执行的五段提示词 <span>可编辑 · 修改不会触发生成</span></label>
+        <textarea id="request-text" rows="8" spellcheck="false"></textarea>
+        <div class="request-actions"><button id="copy-request" class="button primary">复制请求 ↗</button><button id="download-request" class="button secondary">下载文本 ↓</button><span id="copy-status" role="status"></span></div>
+        <p class="small-note">图片已由本次 Agent 调用内置 image_gen 生成；网页仅展示结果，不连接生成服务。切换场景恢复原始提示词。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="extensions" class="extension-section"><div class="wrap section">
+    <div class="section-head"><div><div class="eyebrow">04 / WHAT COMES NEXT</div><h2>让经验可用，<br>再让结果可靠。</h2></div><p>下面是我们建议新增的能力。<br>三张实际样本已完成；批量化与生产扩展尚未实现。</p></div>
+    <div class="extensions-grid">
+      <div class="extension-intro"><span class="large-index">＋</span><h3>先补确定性，<br>再增加风格。</h3><p>最有价值的下一步，是把中文准确性、配方一致性和真实效果验证接入流程。</p><a class="text-link" href="#experiment">看最小实验方案 ↓</a></div>
+      <div class="extension-list">
+        <details open><summary><span>优先 01</span><b>配方编译与规则统一</b><i>＋</i></summary><div><p>把默认值、配方 ID 与规则优先级落实到程序，让同一需求得到可检查的设计配方。</p><p><b>怎么扩展</b>输入校验 → 规则解析 → 保存配方 → 编译提示词。</p><p><b>怎么验收</b>同一输入配方一致，颜色、留白和载体约束不冲突。</p></div></details>
+        <details><summary><span>优先 02</span><b>中文文字独立排版</b><i>＋</i></summary><div><p>让图像模型处理主体与质感，程序负责准确标题、日期与编号。</p><p><b>怎么扩展</b>少文字底图 → 字体与文字布局 → 溢出检查 → 导出。</p><p><b>怎么验收</b>关键文字逐字准确，修改标题不必重新生成主体。</p></div></details>
+        <details><summary><span>优先 03</span><b>真实出图评测</b><i>＋</i></summary><div><p>把“规则数据通过检查”推进到“真实图片接受检查”。</p><p><b>怎么扩展</b>固定请求集 → 模型调用 → 保存首轮与重试 → OCR 和人工评审。</p><p><b>怎么验收</b>每项评分能追溯到图片、提示词和模型版本；失败结果也保留。</p></div></details>
+        <details><summary><span>后续 04</span><b>系列制作与多尺寸适配</b><i>＋</i></summary><div><p>面向多篇研究、章节卡片和不同渠道，管理共享规则与单张差异。</p><p><b>怎么扩展</b>共享配方 → 批量队列 → 局部重试 → 按尺寸重排。</p><p><b>怎么验收</b>仅重试失败项；横竖版文字和主体完整，而非直接拉伸。</p></div></details>
+        <details><summary><span>后续 05</span><b>可编辑与印刷生产</b><i>＋</i></summary><div><p>从模拟印刷外观，进入真正可修改、可生产的交付。</p><p><b>怎么扩展</b>分层 SVG/PDF、字体资源、出血与色版，再与印厂确认工艺。</p><p><b>怎么验收</b>实际色版与打样合格；漂亮的位图不能替代印刷验证。</p></div></details>
+      </div>
+    </div>
+    <div id="experiment" class="experiment"><div class="eyebrow">NEXT EXPERIMENT / 尚未执行</div><h3>同样三个主题，比较三种做法。</h3><div class="experiment-groups"><p><b>A</b><span>普通提示词<small>建立基线</small></span></p><p><b>B</b><span>原版 Skill<small>观察规则收益</small></span></p><p><b>C</b><span>Skill + 中文排版<small>观察准确性与修改成本</small></span></p></div><p class="small-note">3 个主题 × 3 种方法 × 每种 3 次 = 27 份首轮结果。比较文字、主题表达、风格一致性与总成本；修正后的结果单独记录。</p></div>
+  </div></section>
+
+  <section id="evidence" class="wrap section evidence-section"><div><div class="eyebrow">05 / EVIDENCE & LIMITS</div><h2>结论，留有出处。</h2><p>研究版本 <code>c8ff705</code> · 2026.09.05<br>已读码、运行静态校验，并按 Skill 实际生成 3 张图。<br>没有对照组，未测试人物保真、稳定复现或印刷生产。</p></div><div class="sources"><a href="./generated/recipes.json">本次三张图的设计配方 <span>recipes.json ↗</span></a><a href="./generated/REVIEW.md">执行方式与人工检查记录 <span>REVIEW.md ↗</span></a><a href="https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/SKILL.md">工作流与能力定义 <span>SKILL.md ↗</span></a><a href="https://github.com/yanliudesign/mono-color-skill/tree/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/design-system">配色、构图与字体目录 <span>design-system ↗</span></a><a href="https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/scripts/validate_evals.py">静态校验的实际边界 <span>validate_evals.py ↗</span></a><a href="https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/README.zh.md">查看作者的原始示例 <span>上游图集 ↗</span></a><p class="small-note">代码与 Skill 使用 MIT；上游示例图片不在 MIT 范围内。本页主视觉为本次 AI 生成原图，未复制作者示例。<a href="https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/ASSET-LICENSE.md">查看素材许可 ↗</a></p></div></section>
+</main>
+<footer class="wrap footer"><a href="../../">← 返回项目研究集</a><span>LESS INK. MORE INTENT.</span><a href="#main">回到顶部 ↑</a></footer>
+<noscript><p class="noscript">交互预览需要 JavaScript；页面正文与扩展说明仍可阅读。</p></noscript>
+<dialog id="image-dialog"><button id="close-image" aria-label="关闭原图">关闭 ×</button><img id="large-image" alt="生成原图"><p>本次 AI 生成原图 · 可滚动查看 · Esc 关闭</p></dialog>
+</body>
+</html>

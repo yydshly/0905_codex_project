@@ -1,0 +1,24 @@
+export const commit='c8ff70597ddedcd65f21a0b528f6a70c35690b0a';
+export const cases=[
+ {id:'cycling',title:'夏日骑行',category:'海报',colors:'钴蓝 / 陶土橙',tags:['极端裁切','图文交叠'],look:'车轮跨出边缘，斜向标题穿过车架；橙色人体局部把运动方向串起来。',use:'城市活动、运动专题封面：用局部动作传达主题。'},
+ {id:'zebra',title:'田野观察',category:'观察与刊物',colors:'钴蓝 / 橙色',tags:['纵向标题','粗网点'],look:'斑马半身占据右侧，左侧纵向大字形成边界，中间的白纸让轮廓更清楚。',use:'自然观察、知识卡片：让一个识别特征成为主视觉。'},
+ {id:'chair',title:'日常空间',category:'观察与刊物',colors:'植物绿 / 酒红',tags:['尺度反差','纵向标题'],look:'同一把椅子以三个尺度出现，巨大局部与微小完整物件产生距离感。',use:'产品研究、空间笔记：用尺度变化讲述一个普通物件。'},
+ {id:'sardines',title:'沙丁鱼包装',category:'包装',colors:'紫色 / 橙色',tags:['图文交叠','载体延展'],look:'大号衬线字与鱼形交叠，视觉延伸至罐头套纸侧面；拉环仍保留金属外观。',use:'礼品套纸、标签概念：观察平面图形如何沿载体展开。'},
+ {id:'headphones',title:'耳机包装',category:'包装',colors:'钴蓝 / 黑色',tags:['信息网格','载体延展'],look:'蓝色网格组织数字与规格，黑色耳机轮廓与包装开窗连接，信息感很强。',use:'硬件说明、工具介绍：将主题图像与准确参数分层组织。'},
+ {id:'sunscreen',title:'防晒包装',category:'包装',colors:'青蓝 / 珊瑚红',tags:['超大标题','系列一致性'],look:'纵长文字和圆形网点跨越瓶身与盒面，相同图形关系在不同外形上延续。',use:'系列封面、多尺寸物料：保留识别要素，重新安排版面。'},
+ {id:'teapot',title:'留一点温度',category:'海报',colors:'薄荷绿 / 炭黑',tags:['文学字形','动作特写'],look:'开盖的手势与茶壶形成亲密局部；纤细斜体压在壶盖附近，大片纸面放慢阅读。',use:'散文、阅读感想：让一个细小动作承载情绪。'},
+ {id:'merchandise',title:'品牌周边',category:'品牌周边',colors:'钴蓝 / 橙色',tags:['系列一致性','载体延展'],look:'建筑网点、粗体标题与橙色圈注延伸到布袋、T 恤和杯垫，变化来自材质与比例。',use:'研究社群物料：先建立共同视觉，再适配各类载体。'},
+ {id:'tea',title:'慢叶茶',category:'包装',colors:'绿色 / 炭黑',tags:['文学字形','纸张质感'],look:'茶叶与茶碗的网点连接成一个主体，轻盈标题与盒面留白共同传达安静节奏。',use:'内容礼盒、阅读套装：用材质与低密度排版表达气质。'},
+ {id:'night-photography',title:'夜里还有什么',category:'海报',colors:'钴蓝 / 黑色信息字',tags:['中文层级','信息分栏'],look:'大幅中文压在蓝色夜景上，右侧窄栏独立容纳展览信息，视觉与事实各有位置。',use:'研究成果展、分享会：主视觉表达主题，侧栏承载核实后的信息。'},
+ {id:'radio',title:'周日收音机',category:'海报',colors:'钴蓝 / 黑色',tags:['重复物件','线条引导'],look:'收音机与耳机以不同尺度散布，蓝色曲线穿过物件；大字在下半部建立重心。',use:'播客、音频专题：用物件家族表达同一主题的多个侧面。'},
+ {id:'night-market',title:'夜市',category:'海报',colors:'红色 / 青蓝',tags:['异常尺度','信息层级'],look:'巨大蘑菇与微小厨师制造反常尺度，红色标题占据上下两端，蓝色小字安放活动信息。',use:'文化活动、创意分享：用一个反常尺度提高记忆点。'}
+].map(c=>({...c,src:`https://raw.githubusercontent.com/yanliudesign/mono-color-skill/${commit}/examples/example-${c.id}.png`,source:`https://github.com/yanliudesign/mono-color-skill/blob/${commit}/examples/example-${c.id}.png`}));
+
+export function renderCases(){return `<section id="showcase" class="showcase-section"><div class="wrap section">
+<div class="section-head"><div><div class="eyebrow">SELECTED BY THE AUTHOR / 12 WORKS</div><h2>先看作品，再理解规则。</h2></div><p>作者精选的 12 张生成案例。<br>从一张海报，到包装与品牌物料。</p></div>
+<div class="case-filters" role="group" aria-label="案例分类">${['全部','海报','观察与刊物','包装','品牌周边'].map((v,i)=>`<button data-case-filter="${v}" class="${i===0?'active':''}" aria-pressed="${i===0}">${v} <small>${i===0?12:cases.filter(c=>c.category===v).length}</small></button>`).join('')}<span id="case-count" role="status">12 / 12 件作品</span></div>
+<div class="case-grid">${cases.map((c,i)=>`<article class="case-card" data-category="${c.category}"><button class="case-image" data-case="${c.id}" aria-label="查看${c.title}与设计解读"><img src="${c.src}" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="Yan Liu 原创生成案例：${c.title}，${c.colors}"><span class="case-number">${String(i+1).padStart(2,'0')}</span><span class="case-expand">放大 / 设计解读 ↗</span></button><div class="case-title"><h3>${c.title}</h3><span>${c.category}</span></div><p class="case-colors">${c.colors}</p><div class="case-tags">${c.tags.map(t=>`<span>${t}</span>`).join('')}</div><p class="case-look">${c.look}</p><a class="case-source" href="${c.source}" target="_blank" rel="noopener noreferrer">© 2026 Yan Liu · 查看原作 ↗</a></article>`).join('')}</div>
+<div class="case-footnote"><p>设计解读与应用建议为本项目的看图分析，不是作者的原始提示词。包装与周边图片是上游生成的视觉示例，不能据此认定已打样或具备生产文件。</p><p>图片从作者 GitHub 原站加载，需要联网；未复制进本项目。作者示例不属于 MIT 授权素材。<a href="https://github.com/yanliudesign/mono-color-skill/blob/${commit}/ASSET-LICENSE.md" target="_blank" rel="noopener noreferrer">素材许可 ↗</a></p></div>
+<a class="text-link" href="#gallery">接着看：我们按规则实际制作的 3 张图 ↓</a>
+</div></section>
+<dialog id="case-dialog" aria-labelledby="case-dialog-title"><div class="case-dialog-bar"><span id="case-position"></span><button id="case-close">关闭 ×</button></div><div class="case-dialog-layout"><div class="case-dialog-image"><img id="case-large-image" alt="" referrerpolicy="no-referrer"></div><div class="case-dialog-copy"><span class="eyebrow">AUTHOR’S EXAMPLE / 设计解读</span><h2 id="case-dialog-title"></h2><p id="case-dialog-colors"></p><h3>看什么</h3><p id="case-dialog-look"></p><h3>我们怎么用</h3><p id="case-dialog-use"></p><a id="case-dialog-source" class="text-link" target="_blank" rel="noopener noreferrer">© 2026 Yan Liu · 原作与出处 ↗</a><p class="small-note">借鉴设计方法；复用作者图片需另获授权。</p><div class="case-pager"><button id="case-prev" aria-label="上一张案例">← 上一张</button><button id="case-next" aria-label="下一张案例">下一张 →</button></div></div></div></dialog>`;}

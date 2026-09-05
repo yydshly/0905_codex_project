@@ -1,0 +1,140 @@
+{
+  "upstream_commit": "c8ff70597ddedcd65f21a0b528f6a70c35690b0a",
+  "date": "2026-09-05",
+  "execution": "Agent 读取 mono-color SKILL.md 与 JSON 目录后编写五段提示词，调用内置 image_gen；不安装上游、不调用其专用 SDK。",
+  "tool": "image_gen",
+  "model": "工具未返回明确模型版本",
+  "recipes": [
+    {
+      "id": "research",
+      "subject": "打开的技术笔记本与书签",
+      "intent": "cultural poster",
+      "exact_text": [
+        "开源项目研究",
+        "RESEARCH / 004"
+      ],
+      "palette": "palette_cobalt_terracotta",
+      "inks": [
+        "#2148B8",
+        "#C65F38"
+      ],
+      "plate_roles": [
+        "主体、标题与辅助文字",
+        "书签强调区"
+      ],
+      "layout": "composition_editorial_cover",
+      "empty_paper": 35,
+      "type_hierarchy": "type_programmatic",
+      "focal_event": "巨大的打开书本裁切",
+      "release_zone": "右上留白",
+      "disruption": "书本跨出右下边缘",
+      "imperfections": [
+        "imperfection_ink_density"
+      ],
+      "text_language": "zh-CN + exact English labels",
+      "representation": "faithful reproduction",
+      "ratio": "3:4",
+      "carrier": "none",
+      "substrate": {
+        "id": "substrate_neutral_white",
+        "hex": "#FAFAF7"
+      },
+      "mode": "complementary duotone",
+      "visual_tension": "relaxed",
+      "unresolved_edge": "none",
+      "image_treatment": "medium mechanical halftone",
+      "imperfection_seed": "eb81859d",
+      "seed_note": "配方记录的稳定 FNV-1a 标识；内置工具不暴露随机种子参数，不代表像素复现保证。",
+      "prompt_file": "research-prompt.txt",
+      "source_images": [],
+      "originality": "未提供参考图；主体、文字、版式及裁切由本次需求独立构建。"
+    },
+    {
+      "id": "reading",
+      "subject": "翻页手部与打开的书",
+      "intent": "poetic observation",
+      "exact_text": [
+        "读一页世界",
+        "READING NOTES / 01"
+      ],
+      "palette": "palette_aubergine",
+      "inks": [
+        "#63365F"
+      ],
+      "plate_roles": [
+        "全部图像、文字与注释"
+      ],
+      "layout": "composition_editorial_cover",
+      "empty_paper": 40,
+      "type_hierarchy": "type_literary",
+      "focal_event": "翻页手部的极近裁切",
+      "release_zone": "右上留白",
+      "disruption": "主体跨出左边缘",
+      "imperfections": [
+        "imperfection_dry_edge"
+      ],
+      "text_language": "zh-CN + exact English labels",
+      "representation": "faithful reproduction",
+      "ratio": "3:4",
+      "carrier": "none",
+      "substrate": {
+        "id": "substrate_neutral_white",
+        "hex": "#FAFAF7"
+      },
+      "mode": "pure one-ink",
+      "visual_tension": "relaxed",
+      "unresolved_edge": "none",
+      "image_treatment": "medium mechanical halftone",
+      "imperfection_seed": "f966b286",
+      "seed_note": "配方记录的稳定 FNV-1a 标识；内置工具不暴露随机种子参数，不代表像素复现保证。",
+      "prompt_file": "reading-prompt.txt",
+      "source_images": [],
+      "originality": "未提供参考图；主体、文字、版式及裁切由本次需求独立构建。"
+    },
+    {
+      "id": "event",
+      "subject": "木椅上的打开书本",
+      "intent": "announcement",
+      "exact_text": [
+        "一起读一本书",
+        "OPEN READING",
+        "CONCEPT STUDY"
+      ],
+      "palette": "palette_botanical_oxblood",
+      "inks": [
+        "#008A4B",
+        "#8F3434"
+      ],
+      "plate_roles": [
+        "椅子、书本与主标题",
+        "辅助信息带与圈注"
+      ],
+      "layout": "composition_ruled_information",
+      "empty_paper": 40,
+      "type_hierarchy": "type_condensed_civic",
+      "focal_event": "书本与巨大的椅子形成整体",
+      "release_zone": "左侧中部留白",
+      "disruption": "椅子跨出右下边缘",
+      "imperfections": [
+        "imperfection_ink_density"
+      ],
+      "text_language": "zh-CN + exact English labels",
+      "representation": "faithful reproduction",
+      "ratio": "3:4",
+      "carrier": "none",
+      "substrate": {
+        "id": "substrate_neutral_white",
+        "hex": "#FAFAF7"
+      },
+      "mode": "complementary duotone",
+      "visual_tension": "balanced",
+      "unresolved_edge": "none",
+      "image_treatment": "medium mechanical halftone",
+      "imperfection_seed": "12c6da5",
+      "seed_note": "配方记录的稳定 FNV-1a 标识；内置工具不暴露随机种子参数，不代表像素复现保证。",
+      "prompt_file": "event-prompt.txt",
+      "source_images": [],
+      "originality": "未提供参考图；主体、文字、版式及裁切由本次需求独立构建。"
+    }
+  ]
+}
