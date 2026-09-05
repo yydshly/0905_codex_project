@@ -1,0 +1,16 @@
+{
+  "id": 7,
+  "slug": "dzhng-skills",
+  "name": "dzhng/skills 可验证工程工作流研究",
+  "summary": "完整说明 22 个 Skill 的能力、案例与调用时机，用总览图梳理主流程与按需分支，并评估模型增强后的价值",
+  "source": "https://github.com/dzhng/skills",
+  "status": "completed",
+  "tags": [
+    "Agent 工作流",
+    "技能编排",
+    "工程验证"
+  ],
+  "demo": "",
+  "cover": "assets/workflow-map.svg",
+  "coverAlt": "全部 22 个 Skill 的能力与使用顺序总览：主流程、审查、验证、可选工具、领域指导和技能改进循环；原创研究示意，非运行截图"
+}

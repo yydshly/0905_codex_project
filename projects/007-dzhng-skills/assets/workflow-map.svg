@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1530" viewBox="0 0 1600 1530" role="img" aria-labelledby="title desc"><title id="title">dzhng/skills 全部 22 项能力与使用顺序</title><desc id="desc">六步主流程，review 内部三步顺序，行为和视觉验证，可选执行工具与领域技能，以及 write-skills 与 eval-skills 改进循环。主流程按任务裁剪，按需技能不要求依次调用。</desc><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#bb4b2c"/></marker><marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#527663"/></marker></defs><rect width="1600" height="1530" fill="#f5f3ed"/><g font-family="Segoe UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif">
+<text x="60" y="52" font-size="15" fill="#bb4b2c" font-weight="600">007 / ENGINEERING WORKFLOW ATLAS</text>
+<text x="60" y="107" font-size="39" fill="#243b2e" font-weight="650">从需求到效果：22 个 Skill 如何协作</text>
+<text x="60" y="146" font-size="18" fill="#697263" font-weight="400">源码流程的中文整理 · 研究版本 3631529 · 实线表示阶段顺序，虚线表示按需调用或反馈；不代表全部强制执行。</text>
+<text x="60" y="194" font-size="19" fill="#bb4b2c" font-weight="600">A / 大功能主流程</text>
+<rect x="60" y="220" width="230" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="75" y="247" font-size="18" fill="#263e32" font-weight="600">explore-unknowns</text>
+<text x="75" y="275" font-size="17" fill="#354838" font-weight="400">01 澄清需求</text>
+<text x="75" y="301" font-size="14" fill="#6b7566" font-weight="400">未知地图与已定决策</text>
+<path d="M292 270 H306" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="310" y="220" width="230" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="325" y="247" font-size="18" fill="#263e32" font-weight="600">write-spec</text>
+<text x="325" y="275" font-size="17" fill="#354838" font-weight="400">02 定义可验收任务</text>
+<text x="325" y="301" font-size="14" fill="#6b7566" font-weight="400">契约、依赖与接手说明</text>
+<path d="M542 270 H556" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="560" y="220" width="230" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="575" y="247" font-size="18" fill="#263e32" font-weight="600">implement-spec</text>
+<text x="575" y="275" font-size="17" fill="#354838" font-weight="400">03 实现与验证</text>
+<text x="575" y="301" font-size="14" fill="#6b7566" font-weight="400">代码、证据、当前状态</text>
+<path d="M792 270 H806" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="810" y="220" width="230" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="825" y="247" font-size="18" fill="#263e32" font-weight="600">review</text>
+<text x="825" y="275" font-size="17" fill="#354838" font-weight="400">04 审查本轮结果</text>
+<text x="825" y="301" font-size="14" fill="#6b7566" font-weight="400">结构 → 差异 → 文档</text>
+<path d="M1042 270 H1056" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="1060" y="220" width="230" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="1075" y="247" font-size="18" fill="#263e32" font-weight="600">audit-choices</text>
+<text x="1075" y="275" font-size="17" fill="#354838" font-weight="400">05 公开自主决定</text>
+<text x="1075" y="301" font-size="14" fill="#6b7566" font-weight="400">缺口、影响、判断与信心</text>
+<path d="M1292 270 H1306" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="1310" y="220" width="230" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="1325" y="247" font-size="18" fill="#263e32" font-weight="600">close-spec</text>
+<text x="1325" y="275" font-size="17" fill="#354838" font-weight="400">06 完整验收后归档</text>
+<text x="1325" y="301" font-size="14" fill="#6b7566" font-weight="400">最终理由、约束与代码入口</text>
+<path d="M1175 325 V354 H675 V325" fill="none" stroke="#bb4b2c" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<text x="700" y="379" font-size="17" fill="#bb4b2c" font-weight="400">还有任务 → 继续实现；新未知或决策集中 → 返回 write-spec 重新拆分</text>
+<path d="M1090 354 H425 V325" fill="none" stroke="#bb4b2c" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<rect x="60" y="416" width="720" height="340" rx="8" fill="#e9ece2" stroke="#cdd3c5"/>
+<text x="84" y="451" font-size="21" fill="#263e32" font-weight="600">B / review 内部：明确的先后顺序</text>
+<rect x="83" y="481" width="210" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="98" y="508" font-size="18" fill="#263e32" font-weight="600">refactor-clean</text>
+<text x="98" y="536" font-size="17" fill="#354838" font-weight="400">整理职责与结构</text>
+<text x="98" y="562" font-size="14" fill="#6b7566" font-weight="400">每个概念有清楚归属</text>
+<path d="M295 532 H310" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="312" y="481" width="210" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="327" y="508" font-size="18" fill="#263e32" font-weight="600">code-review</text>
+<text x="327" y="536" font-size="17" fill="#354838" font-weight="400">审查稳定后的差异</text>
+<text x="327" y="562" font-size="14" fill="#6b7566" font-weight="400">命名、引用与复杂度</text>
+<path d="M524 532 H539" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<rect x="541" y="481" width="210" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="556" y="508" font-size="18" fill="#263e32" font-weight="600">write-docs</text>
+<text x="556" y="536" font-size="17" fill="#354838" font-weight="400">更新文档与入口</text>
+<text x="556" y="562" font-size="14" fill="#6b7566" font-weight="400">理由、约束、事实来源</text>
+<text x="84" y="630" font-size="18" fill="#354838" font-weight="400">后续审查若改变结构，就返回前序步骤重新检查。</text>
+<text x="84" y="664" font-size="18" fill="#354838" font-weight="400">每块任务审查后，整体完成时还要再审查完整改动。</text>
+<text x="84" y="703" font-size="16" fill="#697263" font-weight="400">决策审计发现问题，由实现流程修正；审计本身不改代码。</text>
+<path d="M925 324 V395 H420 V411" fill="none" stroke="#527663" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#green)"/>
+<rect x="810" y="416" width="730" height="340" rx="8" fill="#edf0e8" stroke="#cdd3c5"/>
+<text x="834" y="451" font-size="21" fill="#263e32" font-weight="600">C / 实现中的验证：按任务选择</text>
+<rect x="834" y="480" width="300" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="849" y="507" font-size="18" fill="#263e32" font-weight="600">write-tests</text>
+<text x="849" y="535" font-size="17" fill="#354838" font-weight="400">行为测试先复现失败</text>
+<text x="849" y="561" font-size="14" fill="#6b7566" font-weight="400">修复后通过，约束真实结果</text>
+<rect x="1154" y="480" width="361" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="1169" y="507" font-size="18" fill="#263e32" font-weight="600">preview-shots</text>
+<text x="1169" y="535" font-size="17" fill="#354838" font-weight="400">需要人工看图时展示</text>
+<text x="1169" y="561" font-size="14" fill="#6b7566" font-weight="400">可选；原版依赖 macOS Preview</text>
+<rect x="834" y="603" width="300" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="849" y="630" font-size="18" fill="#263e32" font-weight="600">compare-screenshots</text>
+<text x="849" y="658" font-size="17" fill="#354838" font-weight="400">固定条件，定位图像差异</text>
+<text x="849" y="684" font-size="14" fill="#6b7566" font-weight="400">指标不能独立决定是否合格</text>
+<rect x="1154" y="603" width="361" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="1169" y="630" font-size="18" fill="#263e32" font-weight="600">screenshot-critique</text>
+<text x="1169" y="658" font-size="17" fill="#354838" font-weight="400">新上下文独立看图</text>
+<text x="1169" y="684" font-size="14" fill="#6b7566" font-weight="400">中性说明、全图与局部放大</text>
+<path d="M1137 653 H1150" fill="none" stroke="#527663" stroke-width="2"  marker-end="url(#green)"/>
+<text x="834" y="738" font-size="16" fill="#697263" font-weight="400">视觉两项互补，按问题迭代；preview-shots 是人工审阅辅助。</text>
+<path d="M675 324 V401 H1180 V412" fill="none" stroke="#527663" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#green)"/>
+<rect x="60" y="787" width="720" height="353" rx="8" fill="#fffaf2" stroke="#cdd3c5"/>
+<text x="84" y="824" font-size="21" fill="#263e32" font-weight="600">D / 可选执行方式：挂在实现与审查环节</text>
+<rect x="84" y="851" width="670" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="99" y="878" font-size="16" fill="#263e32" font-weight="600">implement-spec-with-codex</text>
+<text x="99" y="906" font-size="17" fill="#354838" font-weight="400">implement-spec 的执行变体</text>
+<text x="99" y="932" font-size="14" fill="#6b7566" font-weight="400">Codex 实现；主 Agent 统筹、整合、验证和交接</text>
+<rect x="84" y="990" width="318" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="99" y="1017" font-size="18" fill="#263e32" font-weight="600">codex</text>
+<text x="99" y="1045" font-size="17" fill="#354838" font-weight="400">本地 CLI 审查或明确委派</text>
+<text x="99" y="1071" font-size="14" fill="#6b7566" font-weight="400">需要安装、认证与验证结果</text>
+<rect x="425" y="990" width="329" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="440" y="1017" font-size="18" fill="#263e32" font-weight="600">claude</text>
+<text x="440" y="1045" font-size="17" fill="#354838" font-weight="400">独立意见或明确委派</text>
+<text x="440" y="1071" font-size="14" fill="#6b7566" font-weight="400">与 codex 按需选择，可互补</text>
+<path d="M244 954 V985" fill="none" stroke="#527663" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#green)"/>
+<text x="425" y="977" font-size="14" fill="#697263" font-weight="400">可选，不要求两者都调用</text>
+<rect x="810" y="787" width="730" height="353" rx="8" fill="#fffaf2" stroke="#cdd3c5"/>
+<text x="834" y="824" font-size="21" fill="#263e32" font-weight="600">E / 领域指导：按问题加载，无固定先后</text>
+<rect x="834" y="852" width="681" height="68" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="850" y="879" font-size="18" fill="#263e32" font-weight="600">audit-performance</text>
+<text x="850" y="906" font-size="16" fill="#697263" font-weight="400">性能：量化放大、检查进展与恢复</text>
+<rect x="834" y="935" width="681" height="68" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="850" y="962" font-size="18" fill="#263e32" font-weight="600">marketing-pages</text>
+<text x="850" y="989" font-size="16" fill="#697263" font-weight="400">营销：页面用途、CTA、索引与事实来源</text>
+<rect x="834" y="1018" width="681" height="68" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="850" y="1045" font-size="18" fill="#263e32" font-weight="600">renderer</text>
+<text x="850" y="1072" font-size="16" fill="#697263" font-weight="400">图形：GPU 资源、深度、渲染阶段与实图验证</text>
+<rect x="60" y="1170" width="1480" height="90" rx="8" fill="#263e32" stroke="#263e32"/>
+<text x="83" y="1205" font-size="22" fill="#f5f3ed" font-weight="600">eli5 / 贯穿全过程的解释能力</text>
+<text x="83" y="1236" font-size="18" fill="#c4d0bd" font-weight="400">用具体场景讲清问题、方案与数据契约变化；支持方案沟通、choices.md 和交付说明，不是额外必经步骤。</text>
+<rect x="60" y="1290" width="1480" height="154" rx="8" fill="#e9ece2" stroke="#cdd3c5"/>
+<text x="83" y="1324" font-size="20" fill="#263e32" font-weight="600">F / 技能自身的改进循环：独立于业务交付主流程</text>
+<rect x="84" y="1340" width="385" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="99" y="1367" font-size="18" fill="#263e32" font-weight="600">write-skills</text>
+<text x="99" y="1395" font-size="17" fill="#354838" font-weight="400">沉淀触发、步骤和完成标准</text>
+<text x="99" y="1421" font-size="14" fill="#6b7566" font-weight="400">经验 → 操作规程与配套资料</text>
+<rect x="527" y="1340" width="385" height="102" rx="8" fill="#fffdf7" stroke="#cdd3c5"/>
+<text x="542" y="1367" font-size="18" fill="#263e32" font-weight="600">eval-skills</text>
+<text x="542" y="1395" font-size="17" fill="#354838" font-weight="400">样例盲测、独立评审与重复运行</text>
+<text x="542" y="1421" font-size="14" fill="#6b7566" font-weight="400">发现缺陷 → 修订 → 回归全部样例</text>
+<path d="M473 1378 H523" fill="none" stroke="#bb4b2c" stroke-width="2"  marker-end="url(#arrow)"/>
+<path d="M526 1414 H474" fill="none" stroke="#bb4b2c" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+<text x="955" y="1380" font-size="21" fill="#263e32" font-weight="600">是否有增益，需要真实任务对照。</text>
+<text x="955" y="1414" font-size="18" fill="#697263" font-weight="400">直接模型 / 精简约束 / 完整流程</text>
+<text x="60" y="1487" font-size="17" fill="#697263" font-weight="400">边界：Skill 定义操作规程；宿主提供模型、文件、浏览器和任务运行能力。图为原创研究示意，非上游执行实测。</text>
+</g></svg>
