@@ -32,7 +32,7 @@ npm start
 
 静态资源全部使用相对链接，无 history 路由。目标子路径为 /0905_codex_project/projects/007-dzhng-skills/。总仓库 scripts/build-site.mjs 自动发现 publish.json，并汇总到 _site/projects/007-dzhng-skills/。
 
-目前仅完成本地验证，没有验证线上部署。project.json 的 demo 保持空值；实际发布并验证后再填写，见[部署约定](../../../docs/deployment.md)。
+2026-09-05 已完成 [GitHub Pages 部署验证](https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/)，project.json 已填写正式演示地址。页面、全部静态资源、导航入口和线上交互验证通过，见[部署约定](../../../docs/deployment.md)。
 
 ## 交互验收
 

@@ -10,7 +10,7 @@
     "技能编排",
     "工程验证"
   ],
-  "demo": "",
+  "demo": "https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/",
   "cover": "assets/workflow-map.svg",
   "coverAlt": "全部 22 个 Skill 的能力与使用顺序总览：主流程、审查、验证、可选工具、领域指导和技能改进循环；原创研究示意，非运行截图"
 }

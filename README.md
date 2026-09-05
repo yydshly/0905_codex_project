@@ -23,7 +23,7 @@
 | 004 | [mono-color 设计规则与图像生成工作流研究](./projects/004-mono-color-skill/README.md) | 将配色、构图与字体经验变为 AI 出图规则；用 12 张作者案例、3 张实测图及完整配方说明能力、用途和扩展方向 | 视觉 Skill / 设计系统 / 图像生成 | 已完成 | [源码](<https://github.com/yanliudesign/mono-color-skill>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/004-mono-color-skill/>) |
 | 005 | [XXD Panel 092 线描创作工作流研究](./projects/005-xxd-panel-092/README.md) | 用钢笔扩展与跨画风两组共十二种创意效果、场景说明和任务配置，理解视觉 Skill 的用法与边界 | 视觉 Skill / 图像工作流 / 任务配置 | 已完成 | [源码](<https://github.com/nevertoday/xxd-panel-092>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/005-xxd-panel-092/>) |
 | 006 | [HumanLayer Skills：五个 Skill 与使用场景](./projects/006-humanlayer-skills/README.md) | 五个可独立使用的 Skill：整理规则、收紧 React 类型、搭建重复任务、设计维护方案、用图解释问题 | Skill 图鉴 / 使用场景 / AI 编程 | 已完成 | [源码](<https://github.com/humanlayer/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/006-humanlayer-skills/>) |
-| 007 | [dzhng/skills 可验证工程工作流研究](./projects/007-dzhng-skills/README.md) | 完整说明 22 个 Skill 的能力、案例与调用时机，用总览图梳理主流程与按需分支，并评估模型增强后的价值 | Agent 工作流 / 技能编排 / 工程验证 | 已完成 | [源码](<https://github.com/dzhng/skills>) | — |
+| 007 | [dzhng/skills 可验证工程工作流研究](./projects/007-dzhng-skills/README.md) | 完整说明 22 个 Skill 的能力、案例与调用时机，用总览图梳理主流程与按需分支，并评估模型增强后的价值 | Agent 工作流 / 技能编排 / 工程验证 | 已完成 | [源码](<https://github.com/dzhng/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -83,7 +83,7 @@
 
 完整说明 22 个 Skill 的能力、案例与调用时机，用总览图梳理主流程与按需分支，并评估模型增强后的价值
 
-[研究详情](./projects/007-dzhng-skills/README.md)
+[研究详情](./projects/007-dzhng-skills/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/>)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构

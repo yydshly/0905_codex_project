@@ -2,7 +2,7 @@
 
 通过 22 项技能地图、三种任务流程和决策审计示例，理解如何将 AI 工程经验组织为可复用、可交接、可验证的操作规程。
 
-[返回总索引](../../README.md#项目索引) · [上游项目](https://github.com/dzhng/skills) · [研究笔记](./notes/README.md) · [网页运行说明](./web/README.md)
+[在线研究网页](https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/) · [返回总索引](../../README.md#项目索引) · [上游项目](https://github.com/dzhng/skills) · [研究笔记](./notes/README.md) · [网页运行说明](./web/README.md)
 
 ![中文研究网页桌面首屏真实截图](./assets/desktop.png)
 
@@ -35,7 +35,7 @@
 | 网页技术栈 | 原生 HTML / CSS / JavaScript，Node.js 22+ 构建，无第三方依赖 |
 | 上游许可证 | [MIT](https://github.com/dzhng/skills/blob/3631529b7305eec8dd08b3a827f4d8c16342a29a/LICENSE) |
 | 验证范围 | 源码研究、原创网页构建与浏览器交互；未复现完整自主开发流程 |
-| 发布状态 | 已接入静态站点构建；尚未部署验证，demo 留空 |
+| 发布状态 | [已部署并验证](https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/) |
 
 ## 网页内容
 
