@@ -1,0 +1,37 @@
+[
+  {
+    "file": "office-output-v1.png",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2565489,
+    "sha256": "3b90bd928641997ea30e181d6e2f19fdf8110b38890d93081a4f21eafff08260"
+  },
+  {
+    "file": "portrait-input-v1.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 1835009,
+    "sha256": "8e2d9b3d5a8397bb94a3c9fb164e4fba1a6a9b9ccc0e6a2c75f6e82dda6ca1a3"
+  },
+  {
+    "file": "portrait-output-v1.png",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 2157988,
+    "sha256": "f65fa1785c2f83ad08918d321091030d0389bfa3ade4a9e0eae3cef746a6cc5e"
+  },
+  {
+    "file": "table-input-v1.png",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2456406,
+    "sha256": "31eb5721f88cc04508eeb0d2510d254cf3328f320d91df287e0731d7e19fcf31"
+  },
+  {
+    "file": "table-output-v1.png",
+    "width": 1086,
+    "height": 1448,
+    "bytes": 3322109,
+    "sha256": "c3dfc94fc07a211adef8df4db03919aa43e9c87f8492726583da6e25399696ae"
+  }
+]

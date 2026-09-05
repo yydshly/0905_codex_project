@@ -1,0 +1,12 @@
+{
+  "id": 3,
+  "slug": "wibi-style",
+  "name": "wibi-style 视觉风格工作流研究",
+  "summary": "汇集蜡笔、漫画、复古印刷、牛马宇宙等 28 款视觉风格，以图片或文字需求和风格规则驱动模型生成头像、海报与插画",
+  "source": "https://github.com/Vieeeeeee/wibi-style",
+  "status": "completed",
+  "tags": ["Agent Skill", "图像生成", "视觉工作流"],
+  "demo": "",
+  "cover": "assets/style-atlas-28.png",
+  "coverAlt": "wibi-style 全部 28 款风格效果总览：七列四行列出蜡笔手绘、牛马宇宙、电蓝网点、漫画、宠物、家居等真实上游示例及中文名称"
+}
