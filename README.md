@@ -11,22 +11,30 @@
 按固定编号升序排列。编号从 `001` 开始，归档后保留，不随研究状态重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **0** 个研究项目。
+当前收录 **1** 个研究项目。
 
-尚未添加子项目，首个项目将从 **001** 开始。
+| 编号 | 项目 | 研究摘要 | 主题 | 状态 | 上游 | 演示 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 001 | [英语外刊资源库能力研究](./projects/001-awesome-english-ebooks/README.md) | 整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构 | 内容来源 / 文档处理 / 英语学习 | 已完成 | [源码](<https://github.com/hehonghui/awesome-english-ebooks>) | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
 
 <!-- PROJECT_GALLERY:START -->
-子项目添加封面后，这里会按编号展示图片、摘要和研究入口。
+### 001 · 英语外刊资源库能力研究
+
+[![英语外刊来源与处理研究网页首页，展示研究主旨、来源数量及导航；本项目真实截图](./projects/001-awesome-english-ebooks/assets/cover.png)](./projects/001-awesome-english-ebooks/README.md)
+
+整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构
+
+[研究详情](./projects/001-awesome-english-ebooks/README.md)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构
 
 ```text
 projects/                  按编号排列的独立研究子项目
-  001-project-name/        首个子项目的目录示意，尚未创建
+  001-awesome-english-ebooks/  英语外刊资源库能力研究
     project.json          索引资料：名称、摘要、来源、状态、演示与封面
     README.md             研究介绍、结论、运行方式与图片说明
     assets/               封面、截图、流程图

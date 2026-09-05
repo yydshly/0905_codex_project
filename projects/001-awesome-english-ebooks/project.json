@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "slug": "awesome-english-ebooks",
+  "name": "英语外刊资源库能力研究",
+  "summary": "整理四类外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构",
+  "source": "https://github.com/hehonghui/awesome-english-ebooks",
+  "status": "completed",
+  "tags": [
+    "内容来源",
+    "文档处理",
+    "英语学习"
+  ],
+  "demo": "",
+  "cover": "assets/cover.png",
+  "coverAlt": "英语外刊来源与处理研究网页首页，展示研究主旨、来源数量及导航；本项目真实截图"
+}

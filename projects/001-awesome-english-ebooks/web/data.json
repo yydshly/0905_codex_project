@@ -1,0 +1,220 @@
+{
+  "title": "英语外刊 · 来源与处理研究",
+  "date": "2026-09-05",
+  "commit": "56973cddd86ed77aaa2d489ba4d20bd8ad54914b",
+  "upstream": "https://github.com/hehonghui/awesome-english-ebooks",
+  "sources": [
+    {
+      "id": "economist",
+      "name": "The Economist",
+      "cn": "经济学人",
+      "topic": "经济 · 商业 · 国际事务",
+      "dir": "01_economist",
+      "official": "https://www.economist.com/",
+      "schedule": "上游声明：每周更新",
+      "formats": {
+        "epub": 89,
+        "mobi": 88,
+        "pdf": 80,
+        "audio": 15
+      },
+      "sample": "01_economist/te_2026.09.05/TheEconomist.2026.09.05.epub",
+      "opf": "EPUB/content.opf",
+      "spine": 102,
+      "links": 181,
+      "note": "样本包含 economist.com 链接。包级 creator 为 Kovid Goyal，不能作为文章作者。",
+      "status": "官网入口本次返回 402；目录和样本已核验。",
+      "xmlWarnings": 0
+    },
+    {
+      "id": "newyorker",
+      "name": "The New Yorker",
+      "cn": "纽约客",
+      "topic": "文化 · 报道 · 文学",
+      "dir": "02_new_yorker",
+      "official": "https://www.newyorker.com/",
+      "schedule": "上游声明：每周更新",
+      "formats": {
+        "epub": 104,
+        "mobi": 88,
+        "pdf": 85,
+        "audio": 0
+      },
+      "sample": "02_new_yorker/2026.09.07/new_yorker.2026.09.07.epub",
+      "opf": "EPUB/content.opf",
+      "spine": 32,
+      "links": 21,
+      "note": "样本包含 newyorker.com 链接。存在零售、推广和引用外链，需与文章原始地址区分。",
+      "status": "官网、仓库目录和 EPUB 包结构已核验。",
+      "xmlWarnings": 0
+    },
+    {
+      "id": "atlantic",
+      "name": "The Atlantic",
+      "cn": "大西洋月刊",
+      "topic": "社会 · 观点 · 长篇报道",
+      "dir": "04_atlantic",
+      "official": "https://www.theatlantic.com/",
+      "schedule": "上游声明：每月 2 日更新",
+      "formats": {
+        "epub": 9,
+        "mobi": 1,
+        "pdf": 9,
+        "audio": 0
+      },
+      "sample": "04_atlantic/2026.09.02/Atlantic_2026.09.02.epub",
+      "opf": "content.opf",
+      "spine": 22,
+      "links": 86,
+      "note": "样本 creator / publisher 为 calibre，并有 calibre:timestamp、publication_type。",
+      "status": "官网跳转 /world/；样本确认有 Calibre 打包元数据。",
+      "xmlWarnings": 0
+    },
+    {
+      "id": "wired",
+      "name": "WIRED",
+      "cn": "连线",
+      "topic": "科技 · 科学 · 数字文化",
+      "dir": "05_wired",
+      "official": "https://www.wired.com/",
+      "schedule": "上游声明：每月 2 日更新",
+      "formats": {
+        "epub": 9,
+        "mobi": 0,
+        "pdf": 6,
+        "audio": 0
+      },
+      "sample": "05_wired/2026.09.02/wired_2026.09.02.epub",
+      "opf": "content.opf",
+      "spine": 61,
+      "links": 777,
+      "note": "样本含 Calibre 元数据。该次更新仅有 EPUB，不能把历史 PDF 数量当作每期能力。",
+      "status": "官网、仓库目录和 EPUB 包结构已核验。",
+      "xmlWarnings": 8
+    }
+  ],
+  "stages": [
+    {
+      "title": "登记来源与版本",
+      "short": "来源登记",
+      "input": "GitHub 文件树 / 用户导入文件",
+      "output": "source-manifest.json",
+      "method": "固定 commit，按刊物与期次枚举文件；分别保存发布者域名、仓库路径、原文候选 URL、blob SHA、获取时间和使用范围。",
+      "check": "检查 API truncated 字段；清单路径和版本能够回溯，未知原文 URL 保持 null。",
+      "failure": "分页或目录遍历不完整时停止增量更新，记录缺失项。",
+      "insight": "官网、文件分发地址、文章原文和普通外链是四种不同关系。"
+    },
+    {
+      "title": "按需获取与校验",
+      "short": "获取校验",
+      "input": "版本化文件清单",
+      "output": "原始文件 + SHA-256 + 状态记录",
+      "method": "按需要选择期次和格式，优先 EPUB；使用固定 commit 的 Raw 地址获取，按 blob SHA 判断变化，以 SHA-256 记录实际字节。原件与派生产物分开保存。",
+      "check": "验证响应、文件签名和大小；散列用于身份与变化检测，不代表已证明内容真实性。",
+      "failure": "下载至临时文件，成功后再入库；超时有限重试，失败保留状态，避免半文件进入处理。",
+      "insight": "同一期多种格式是不同文件，不能只按文件名去重或合计成独立期数。"
+    },
+    {
+      "title": "识别格式与读取顺序",
+      "short": "解析结构",
+      "input": "EPUB / PDF / MOBI",
+      "output": "有序文档节点 + 资源映射",
+      "method": "EPUB 从 META-INF/container.xml 定位 OPF，再读 manifest、spine 与 nav/NCX；PDF 需保留页码并判断是否需要 OCR；MOBI 可经转换处理，同时保留转换版本。",
+      "check": "所有 spine 引用能解析；路径、编码和图片引用有效；不按 ZIP 文件名排序冒充阅读顺序。",
+      "failure": "不可解析的文件隔离，保留错误定位；OCR 和转换结果单独标注来源。",
+      "insight": "四个样本的 OPF 有两种位置；spine 数量 102 / 32 / 22 / 61，不等于文章数。 WIRED 样本有 8 个文档未通过严格 XML 解析，需记录告警并设计容错。"
+    },
+    {
+      "title": "清洗并拆分文章",
+      "short": "清洗拆分",
+      "input": "有序 XHTML / 页面内容",
+      "output": "文章、段落、图片与原文锚点",
+      "method": "结合目录、标题层级和正文边界识别文章；移除导航、重复页眉和推广块；正文引文与图注保留。识别文章 byline，区分原文候选地址、引用和推广外链。",
+      "check": "对照目录抽查首尾段落、标题、作者与阅读顺序；记录被移除区域以便复核。",
+      "failure": "来源或作者不明确时标记待核验，不从首个外链或包级 creator 猜测。",
+      "insight": "样本 creator 出现 Kovid Goyal 或 calibre；文章作者必须在文章层面另行提取。"
+    },
+    {
+      "title": "规范化与去重",
+      "short": "结构化",
+      "input": "拆分文章与来源记录",
+      "output": "publication → issue → article → block",
+      "method": "为文章与段落生成稳定标识；分开记录期号日期、文章发布日期、获取时间与处理版本。优先用核验后的 canonical URL 去重，再结合正文散列检测重复和修订。",
+      "check": "每条内容都能回到 commit、文件、内部路径与锚点；同一文章的不同版本不被误删。",
+      "failure": "标题相似但来源不同的文章保留；字段冲突进入人工复核列表。",
+      "insight": "最重要的派生产物是可回溯的文章数据，而不仅是转换后的另一种电子书。"
+    },
+    {
+      "title": "关联音频与建立索引",
+      "short": "音频与检索",
+      "input": "文章数据 + 可用音频索引",
+      "output": "全文索引 / 可选向量索引 / 音频关联",
+      "method": "按刊物、期次、标题候选匹配 audio JSON，并保存匹配置信度；全文索引先支持标题、日期与正文。向量分块保留 articleId、blockId 和来源。",
+      "check": "音频地址可用性与匹配关系分别检查；检索结果可定位原文；全文引用不脱离上下文。",
+      "failure": "无音频时允许纯阅读；低置信度不强行绑定，失效索引可从结构化数据重建。",
+      "insight": "历史 JSON 只有 article 与 url，句子同步还需要额外的音文对齐步骤。"
+    },
+    {
+      "title": "交付阅读与学习能力",
+      "short": "应用交付",
+      "input": "结构化内容与可回溯检索",
+      "output": "阅读器 / 精读 / 专题问答 / 学习记录",
+      "method": "提供原文阅读、选句解释、笔记和生词；问答展示引用；学习记录与原文分开存储。内容修订时按稳定标识迁移或提示笔记定位变化。",
+      "check": "解释对应选句、引用跳转正确、学习记录可恢复；公开展示内容符合样本使用范围。",
+      "failure": "模型不可用时保留基本阅读与检索；生成内容和原文明确区分。",
+      "insight": "当前网页是研究导航与流程说明；完整学习系统属于后续扩展。"
+    }
+  ],
+  "refs": [
+    [
+      "上游固定版本",
+      "https://github.com/hehonghui/awesome-english-ebooks/tree/56973cddd86ed77aaa2d489ba4d20bd8ad54914b",
+      "仓库结构与内容范围"
+    ],
+    [
+      "完整文件树",
+      "https://api.github.com/repos/hehonghui/awesome-english-ebooks/git/trees/56973cddd86ed77aaa2d489ba4d20bd8ad54914b?recursive=1",
+      "格式数量、文件与目录"
+    ],
+    [
+      "音频 JSON 样例",
+      "https://github.com/hehonghui/awesome-english-ebooks/blob/56973cddd86ed77aaa2d489ba4d20bd8ad54914b/01_economist/2025/te_2025.01.04/TheEconomist.2025.01.04_audios.json",
+      "文章标题与外部 MP3 地址"
+    ],
+    [
+      "历史音频 Wiki",
+      "https://github.com/hehonghui/awesome-english-ebooks/wiki/te-audios-2024",
+      "经济学人历史音频入口"
+    ],
+    [
+      "忽略规则",
+      "https://github.com/hehonghui/awesome-english-ebooks/blob/56973cddd86ed77aaa2d489ba4d20bd8ad54914b/.gitignore",
+      "recipe、Python、Shell 未公开的线索"
+    ],
+    [
+      "图片 CSS",
+      "https://github.com/hehonghui/awesome-english-ebooks/blob/56973cddd86ed77aaa2d489ba4d20bd8ad54914b/calibre_img.css",
+      "图片排版规则"
+    ],
+    [
+      "EPUB 3.3 标准",
+      "https://www.w3.org/TR/epub-33/",
+      "container、manifest、spine 与导航"
+    ],
+    [
+      "Calibre 新闻获取",
+      "https://manual.calibre-ebook.com/news.html",
+      "recipe 的工具能力"
+    ],
+    [
+      "Calibre 转换机制",
+      "https://manual.calibre-ebook.com/conversion.html",
+      "转换与结构处理参考"
+    ],
+    [
+      "GitHub Trees API",
+      "https://docs.github.com/en/rest/git/trees",
+      "版本化文件清单"
+    ]
+  ]
+}
