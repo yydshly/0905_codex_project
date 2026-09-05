@@ -2,7 +2,7 @@
 
 **这个库收录了五个可以单独使用的 Skill，分别处理五类任务。** 每个 Skill 主要是一份给 AI 编程助手读取的操作说明；复杂的任务还附有模板和辅助脚本。使用时挑选对应的一项，不需要把五项串起来运行。
 
-[返回总索引](../../README.md) · [上游仓库](https://github.com/humanlayer/skills) · [源码与验证记录](./notes/README.md) · [本地展示页说明](./web/README.md)
+[返回总索引](../../README.md) · [上游仓库](https://github.com/humanlayer/skills) · [源码与验证记录](./notes/README.md) · [在线能力展示](https://yydshly.github.io/0905_codex_project/projects/006-humanlayer-skills/) · [本地展示页说明](./web/README.md)
 
 ![五个独立 Skill：能力、实际问题与简单场景引导图](./assets/five-skills.svg)
 

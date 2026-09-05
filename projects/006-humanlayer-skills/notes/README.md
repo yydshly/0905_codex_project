@@ -59,3 +59,4 @@ node projects/006-humanlayer-skills/web/preview.mjs
 
 最终发布前验收：在基于 origin/main 的独立工作目录中，项目索引校验、JavaScript 语法检查、全站构建、136 个本地链接与资源检查、git diff --check 全部通过。此前其他项目缺文件的临时阻挡已不影响本次提交。
 
+线上验证（2026-09-05）：提交 cd980bb 的 Repository checks 与 Pages 工作流均成功；页面、styles.css、app.js、research.md、upstream-LICENSE.txt 均返回 HTTP 200，确认线上包含新版五项 Skill 文案。引导图已在浏览器以 1440 × 1000 视口检查，五行信息完整，无文字重叠。

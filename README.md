@@ -22,7 +22,7 @@
 | 003 | [wibi-style 视觉风格工作流研究](./projects/003-wibi-style/README.md) | 汇集蜡笔、漫画、复古印刷、牛马宇宙等 28 款视觉风格，以图片或文字需求和风格规则驱动模型生成头像、海报与插画 | Agent Skill / 图像生成 / 视觉工作流 | 已完成 | [源码](<https://github.com/Vieeeeeee/wibi-style>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/003-wibi-style/>) |
 | 004 | [mono-color 设计规则与图像生成工作流研究](./projects/004-mono-color-skill/README.md) | 将配色、构图与字体经验变为 AI 出图规则；用 12 张作者案例、3 张实测图及完整配方说明能力、用途和扩展方向 | 视觉 Skill / 设计系统 / 图像生成 | 已完成 | [源码](<https://github.com/yanliudesign/mono-color-skill>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/004-mono-color-skill/>) |
 | 005 | [XXD Panel 092 线描创作工作流研究](./projects/005-xxd-panel-092/README.md) | 用钢笔扩展与跨画风两组共十二种创意效果、场景说明和任务配置，理解视觉 Skill 的用法与边界 | 视觉 Skill / 图像工作流 / 任务配置 | 已完成 | [源码](<https://github.com/nevertoday/xxd-panel-092>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/005-xxd-panel-092/>) |
-| 006 | [HumanLayer Skills：五个 Skill 与使用场景](./projects/006-humanlayer-skills/README.md) | 五个可独立使用的 Skill：整理规则、收紧 React 类型、搭建重复任务、设计维护方案、用图解释问题 | Skill 图鉴 / 使用场景 / AI 编程 | 已完成 | [源码](<https://github.com/humanlayer/skills>) | — |
+| 006 | [HumanLayer Skills：五个 Skill 与使用场景](./projects/006-humanlayer-skills/README.md) | 五个可独立使用的 Skill：整理规则、收紧 React 类型、搭建重复任务、设计维护方案、用图解释问题 | Skill 图鉴 / 使用场景 / AI 编程 | 已完成 | [源码](<https://github.com/humanlayer/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/006-humanlayer-skills/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -74,7 +74,7 @@
 
 五个可独立使用的 Skill：整理规则、收紧 React 类型、搭建重复任务、设计维护方案、用图解释问题
 
-[研究详情](./projects/006-humanlayer-skills/README.md)
+[研究详情](./projects/006-humanlayer-skills/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/006-humanlayer-skills/>)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构

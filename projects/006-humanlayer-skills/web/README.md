@@ -14,4 +14,4 @@ node projects/006-humanlayer-skills/web/preview.mjs
 
 独立构建：`node projects/006-humanlayer-skills/web/build.mjs`，输出 web/dist/。publish.json 接入仓库统一构建。样式、脚本、文件使用相对路径，页内导航使用 hash，返回导航链接按站点稳定子路径设计。
 
-包含五项能力面板、三种闭环场景、待审 PR 阻挡与应用建议。不调用模型，不创建 PR，不持久保存模拟记忆。尚未验证线上部署，演示字段留空。
+包含五项能力面板、三种闭环场景、待审 PR 阻挡与应用建议。不调用模型，不创建 PR，不持久保存模拟记忆。2026-09-05 已验证 GitHub Pages 部署与页面资源，演示地址已写入 project.json。
