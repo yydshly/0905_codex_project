@@ -103,4 +103,4 @@ node projects/005-xxd-panel-092/web/preview.mjs
 
 预览地址：`http://127.0.0.1:4185/projects/005-xxd-panel-092/`。
 
-网页已接入总仓库静态构建契约。尚未部署验证，`project.json` 的 `demo` 保持空值。
+网页已于 2026-09-05 完成 GitHub Pages 发布验证：[在线研究网页](https://yydshly.github.io/0905_codex_project/projects/005-xxd-panel-092/)。入口、CSS、JavaScript 模块、两组创意图与许可资源均返回 HTTP 200。

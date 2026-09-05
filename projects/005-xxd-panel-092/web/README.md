@@ -42,4 +42,4 @@ node projects/005-xxd-panel-092/web/preview.mjs
 
 ## 发布状态
 
-已提供 `publish.json`，可随研究总仓库构建发布；本轮尚未进行线上部署验证。不得在 `project.json` 中提前填写正式演示地址。
+已于 2026-09-05 通过 GitHub Actions 发布并验证：[在线研究网页](https://yydshly.github.io/0905_codex_project/projects/005-xxd-panel-092/)。入口、CSS、JS 模块、效果图和许可证返回 HTTP 200；已填写 demo 并同步首页。
