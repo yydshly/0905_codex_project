@@ -4,9 +4,9 @@
 
 ## 先看效果，再理解这个库
 
-[![小动作开始：79 秒白板视频真实画面，点击查看视频文件](./assets/video-preview.jpg)](./production/small-steps/web-video.mp4)
+[![小动作开始：79 秒白板视频真实画面，点击查看视频文件](./assets/video-preview.jpg)](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/#library-proof)
 
-**输入想法：目标太大时容易拖延，可以先从小动作开始。** 七张白板插画配合渐进揭幕、轻推近、MiniMax 中文旁白和 36 条字幕，实际导出约 79 秒、1080×1920、30fps 的有声视频。[查看／下载 MP4](./production/small-steps/web-video.mp4)。GitHub README 用真实帧作引导，点击进入视频文件；网页提供可播放版本。
+**输入想法：目标太大时容易拖延，可以先从小动作开始。** 七张白板插画配合渐进揭幕、轻推近、MiniMax 中文旁白和 36 条字幕，实际导出约 79 秒、1080×1920、30fps 的有声视频。[查看／下载 MP4](./production/small-steps/web-video.mp4)。点击预览图进入[网页播放器](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/#library-proof)，也可下载 MP4。线上页面与视频资源已验证 HTTP 200。
 
 这个库贡献的是叙事与白板视觉规范、字幕生成脚本及具体装配经验；图片模型、MiniMax、HyperFrames 是外部能力。本次保留原脚本，补充服务适配、字幕断句与倒回播放的显示修复。纯旁白版本未验证背景音乐与侧链混音。
 

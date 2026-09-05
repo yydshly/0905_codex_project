@@ -47,4 +47,4 @@ python -m http.server 4318 --bind 127.0.0.1 --directory _site
 
 场景样例位于 `#examples`。三个案例各有 6 个镜头，按每镜 5 秒示意，总长 30 秒。可选择口播句子、前后切镜、播放暂停、拖动进度并下载 Markdown。时间仅用于解释制作方案；真实配音后需要重新安排。没有音轨或 MP4 导出。390px 等手机视口点击口播会滚动到对应画面。
 
-尚未线上部署；只有实际发布并核验入口与资源后，才填写 `../project.json` 的 `demo` 并同步首页。
+已发布并验证：[线上入口](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/)、视频资源及扩展场景内容均可访问；project.json 与总 README 已同步。

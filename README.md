@@ -10,9 +10,9 @@
 
 ## 先看一段真实视频
 
-[![79 秒白板视频真实画面：把大目标变成今天的小动作](./projects/008-whiteboard-book-video-skill/assets/video-preview.jpg)](./projects/008-whiteboard-book-video-skill/README.md#先看效果再理解这个库)
+[![79 秒白板视频真实画面：把大目标变成今天的小动作](./projects/008-whiteboard-book-video-skill/assets/video-preview.jpg)](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/#library-proof)
 
-**一句想法怎样变成视频？** 以“目标太大时，先从小动作开始”为例，展示白板揭幕、MiniMax 配音与字幕的实际效果。[观看／下载 79 秒视频](./projects/008-whiteboard-book-video-skill/production/small-steps/web-video.mp4) · [了解原库能力与七类扩展场景](./projects/008-whiteboard-book-video-skill/README.md)。本版为纯旁白，网页进一步区分原库贡献与外部工具能力。
+**一句想法怎样变成视频？** 以“目标太大时，先从小动作开始”为例，展示白板揭幕、MiniMax 配音与字幕的实际效果。[观看 79 秒视频](https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/#library-proof) · [了解原库能力与七类扩展场景](./projects/008-whiteboard-book-video-skill/README.md)。本版为纯旁白，网页进一步区分原库贡献与外部工具能力。
 
 ## 项目索引
 
@@ -30,7 +30,7 @@
 | 005 | [XXD Panel 092 线描创作工作流研究](./projects/005-xxd-panel-092/README.md) | 用钢笔扩展与跨画风两组共十二种创意效果、场景说明和任务配置，理解视觉 Skill 的用法与边界 | 视觉 Skill / 图像工作流 / 任务配置 | 已完成 | [源码](<https://github.com/nevertoday/xxd-panel-092>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/005-xxd-panel-092/>) |
 | 006 | [HumanLayer Skills：五个 Skill 与使用场景](./projects/006-humanlayer-skills/README.md) | 五个可独立使用的 Skill：整理规则、收紧 React 类型、搭建重复任务、设计维护方案、用图解释问题 | Skill 图鉴 / 使用场景 / AI 编程 | 已完成 | [源码](<https://github.com/humanlayer/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/006-humanlayer-skills/>) |
 | 007 | [dzhng/skills 可验证工程工作流研究](./projects/007-dzhng-skills/README.md) | 完整说明 22 个 Skill 的能力、案例与调用时机，用总览图梳理主流程与按需分支，并评估模型增强后的价值 | Agent 工作流 / 技能编排 / 工程验证 | 已完成 | [源码](<https://github.com/dzhng/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/>) |
-| 008 | [白板拆书视频工作流研究](./projects/008-whiteboard-book-video-skill/README.md) | 用 79 秒真实有声视频理解白板制作流程，整理七类扩展场景、原库贡献与适配边界 | 多模态工作流 / 知识视频 / Agent Skill | 已完成 | [源码](<https://github.com/nutllwhy/whiteboard-book-video-skill>) | — |
+| 008 | [白板拆书视频工作流研究](./projects/008-whiteboard-book-video-skill/README.md) | 用 79 秒真实有声视频理解白板制作流程，整理七类扩展场景、原库贡献与适配边界 | 多模态工作流 / 知识视频 / Agent Skill | 已完成 | [源码](<https://github.com/nutllwhy/whiteboard-book-video-skill>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -98,7 +98,7 @@
 
 用 79 秒真实有声视频理解白板制作流程，整理七类扩展场景、原库贡献与适配边界
 
-[研究详情](./projects/008-whiteboard-book-video-skill/README.md)
+[研究详情](./projects/008-whiteboard-book-video-skill/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/>)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构

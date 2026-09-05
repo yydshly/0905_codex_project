@@ -10,7 +10,7 @@
     "知识视频",
     "Agent Skill"
   ],
-  "demo": "",
+  "demo": "https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/",
   "cover": "assets/video-preview.jpg",
   "coverAlt": "小动作开始白板视频真实渲染帧：具体行动、MiniMax 旁白字幕与白板插画"
 }
