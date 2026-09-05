@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {cases,renderCases} from './cases.mjs';
+import {renderUses} from './use-cases.mjs';
+import {renderGoals} from './goals.mjs';
 const root = path.dirname(fileURLToPath(import.meta.url));
 const output = path.join(root, 'dist');
 fs.mkdirSync(output, {recursive: true});
@@ -12,7 +14,7 @@ const reviews={research:'观察：中文标题可辨读，蓝色主体与橙色�
 const demos=recipes.recipes.map(r=>({...r,prompt:fs.readFileSync(path.join(assets,r.prompt_file),'utf8'),review:reviews[r.id]}));
 fs.writeFileSync(path.join(output,'demos.js'),'window.MONO_DEMOS='+JSON.stringify(demos)+';');
 fs.writeFileSync(path.join(output,'cases-data.js'),'window.MONO_CASES='+JSON.stringify(cases)+';');
-fs.writeFileSync(path.join(output,'index.html'),fs.readFileSync(path.join(root,'index.html'),'utf8').replace('<!-- AUTHOR_CASES -->',renderCases()));
+fs.writeFileSync(path.join(output,'index.html'),fs.readFileSync(path.join(root,'index.html'),'utf8').replace('<!-- AUTHOR_CASES -->',renderGoals()+renderCases()).replace('<!-- USE_CASES -->',renderUses()));
 for (const file of ['styles.css', 'app.js','showcase.js']) {
   fs.copyFileSync(path.join(root, file), path.join(output, file));
 }
