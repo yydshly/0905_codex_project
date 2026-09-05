@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "slug": "translate-book",
+  "name": "长内容并行翻译架构研究",
+  "summary": "理解 AI 翻译与脚本编排的分工，梳理分块并行、术语反馈、断点续跑和局部重译架构",
+  "source": "https://github.com/deusyu/translate-book",
+  "status": "completed",
+  "tags": ["Agent 架构", "文档翻译", "任务编排"],
+  "demo": "",
+  "cover": "assets/architecture.png",
+  "coverAlt": "长内容并行翻译架构示意：转换分块、AI 协调与翻译、术语反馈与状态记录、校验交付；包含能力边界与下游建议，非运行截图"
+}

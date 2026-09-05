@@ -6,18 +6,19 @@
 
 [在线研究导航](https://yydshly.github.io/0905_codex_project/) · [子项目目录](./projects/) · [新增与维护](./docs/project-guide.md) · [Web 部署约定](./docs/deployment.md)
 
-首个项目：[英语外刊来源与处理研究](https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/)。建议按“内容来源 → 完整架构 → 获取与处理 → 样本证据”阅读；详细笔记与复核方法见子项目。
+阅读路线：[001 · 英语外刊来源与处理](./projects/001-awesome-english-ebooks/README.md) → [002 · 长内容并行翻译架构](./projects/002-translate-book/README.md)。从材料来源进入处理流程，各项目以架构图片引导阅读；002 仅提供 GitHub 文档与图片。
 
 ## 项目索引
 
 按固定编号升序排列。编号从 `001` 开始，归档后保留，不随研究状态重新排序。
 
 <!-- PROJECT_INDEX:START -->
-当前收录 **1** 个研究项目。
+当前收录 **2** 个研究项目。
 
 | 编号 | 项目 | 研究摘要 | 主题 | 状态 | 上游 | 演示 |
 | --- | --- | --- | --- | --- | --- | --- |
 | 001 | [英语外刊资源库能力研究](./projects/001-awesome-english-ebooks/README.md) | 梳理当前与历史外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构 | 内容来源 / 文档处理 / 英语学习 | 已完成 | [源码](<https://github.com/hehonghui/awesome-english-ebooks>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>) |
+| 002 | [长内容并行翻译架构研究](./projects/002-translate-book/README.md) | 理解 AI 翻译与脚本编排的分工，梳理分块并行、术语反馈、断点续跑和局部重译架构 | Agent 架构 / 文档翻译 / 任务编排 | 已完成 | [源码](<https://github.com/deusyu/translate-book>) | — |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -30,6 +31,14 @@
 梳理当前与历史外刊来源、获取后的七步处理逻辑、EPUB 样本证据与完整架构
 
 [研究详情](./projects/001-awesome-english-ebooks/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/001-awesome-english-ebooks/>)
+
+### 002 · 长内容并行翻译架构研究
+
+[![长内容并行翻译架构示意：转换分块、AI 协调与翻译、术语反馈与状态记录、校验交付；包含能力边界与下游建议，非运行截图](./projects/002-translate-book/assets/architecture.png)](./projects/002-translate-book/README.md)
+
+理解 AI 翻译与脚本编排的分工，梳理分块并行、术语反馈、断点续跑和局部重译架构
+
+[研究详情](./projects/002-translate-book/README.md)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构

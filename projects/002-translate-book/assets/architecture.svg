@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1710" viewBox="0 0 1440 1710" role="img" aria-labelledby="title desc">
+<title id="title">translate-book：长内容并行翻译架构</title>
+<desc id="desc">从文档转换分块到 AI 并行翻译，术语反馈和状态记录支撑后续批次与重译，校验后合并导出。下游阅读学习为建议，未实现。</desc>
+<rect width="1440" height="1710" fill="#F7F8F5"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="60" y="81.0" font-size="42" font-weight="700" fill="#20372F">一本书，如何交给多个 AI 协作翻译</text>
+<text x="60" y="126.2" font-size="23" font-weight="400" fill="#627269">translate-book  /  架构研究  /  2026-09-05  /  commit 5d07e733</text>
+<rect x="60" y="153" width="20" height="20" rx="15" fill="#EEF3FA" stroke="#416B9C" stroke-width="2"/>
+<text x="93" y="169.4" font-size="22" font-weight="400" fill="#416B9C">脚本与转换工具</text>
+<rect x="360" y="153" width="20" height="20" rx="15" fill="#EAF4EE" stroke="#287150" stroke-width="2"/>
+<text x="393" y="169.4" font-size="22" font-weight="400" fill="#287150">AI 语义任务</text>
+<rect x="640" y="153" width="20" height="20" rx="15" fill="#FFF3DF" stroke="#956222" stroke-width="2"/>
+<text x="673" y="169.4" font-size="22" font-weight="400" fill="#956222">共享记录</text>
+<text x="960" y="169.4" font-size="22" font-weight="400" fill="#627269">示意图 · 非运行截图</text>
+<text x="60" y="242.0" font-size="25" font-weight="700" fill="#81958A">01</text>
+<text x="113" y="242.6" font-size="28" font-weight="700" fill="#20372F">转换与分块</text>
+<text x="580" y="240.5" font-size="21" font-weight="400" fill="#627269">文件结构与长度驱动；不是全书语义理解</text>
+<rect x="60" y="270" width="360" height="155" rx="15" fill="#EEF3FA" stroke="#416B9C" stroke-width="2"/>
+<text x="82" y="313.9" font-size="26" font-weight="700" fill="#416B9C">输入与格式转换</text>
+<text x="82" y="353.4" font-size="22" font-weight="400" fill="#20372F">PDF / DOCX / EPUB</text>
+<text x="82" y="386.4" font-size="22" font-weight="400" fill="#20372F">Calibre → HTMLZ → HTML</text>
+<rect x="490" y="270" width="420" height="155" rx="15" fill="#EEF3FA" stroke="#416B9C" stroke-width="2"/>
+<text x="512" y="313.9" font-size="26" font-weight="700" fill="#416B9C">Markdown → 源文块</text>
+<text x="512" y="353.4" font-size="22" font-weight="400" fill="#20372F">Pandoc 转换；目标约 6,000 字符</text>
+<text x="512" y="386.4" font-size="22" font-weight="400" fill="#20372F">识别标题、段落、表格等结构</text>
+<rect x="980" y="270" width="400" height="155" rx="15" fill="#FFF3DF" stroke="#956222" stroke-width="2"/>
+<text x="1002" y="313.9" font-size="26" font-weight="700" fill="#956222">记录源文件与块清单</text>
+<text x="1002" y="353.4" font-size="22" font-weight="400" fill="#20372F">source_fingerprint.json</text>
+<text x="1002" y="386.4" font-size="22" font-weight="400" fill="#20372F">manifest.json：顺序与源文哈希</text>
+<polyline points="420,347 482,347" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="482.0,347.0 470.5,353.0 470.5,341.0" fill="#81958A"/>
+<polyline points="910,347 972,347" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="972.0,347.0 960.5,353.0 960.5,341.0" fill="#81958A"/>
+<polyline points="700,425 700,468" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="700.0,468.0 694.0,456.5 706.0,456.5" fill="#81958A"/>
+<text x="60" y="509.0" font-size="25" font-weight="700" fill="#81958A">02</text>
+<text x="113" y="509.6" font-size="28" font-weight="700" fill="#20372F">规划与并行翻译</text>
+<text x="580" y="507.5" font-size="21" font-weight="400" fill="#627269">每块独立上下文；默认每批 8 个，依环境调整</text>
+<rect x="60" y="540" width="1320" height="130" rx="15" fill="#EAF4EE" stroke="#287150" stroke-width="2"/>
+<text x="82" y="583.9" font-size="26" font-weight="700" fill="#287150">主 AI 代理 + run_state.py：决定哪些块需要处理</text>
+<text x="82" y="623.4" font-size="22" font-weight="400" fill="#20372F">读取 Skill 与现有状态 → 建立 / 读取术语表 → 安排翻译、补记状态或跳过</text>
+<polyline points="720,670 720,709" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="720.0,709.0 714.0,697.5 726.0,697.5" fill="#81958A"/>
+<text x="170" y="737.1" font-size="24" font-weight="400" fill="#627269">每块输入：正文 + 相关 / 高频术语 + 前后各约 300 字符只读片段</text>
+<rect x="60" y="766" width="420" height="144" rx="15" fill="#EAF4EE" stroke="#287150" stroke-width="2"/>
+<text x="82" y="809.0" font-size="25" font-weight="700" fill="#287150">子代理 A · chunk0001</text>
+<text x="82" y="849.4" font-size="22" font-weight="400" fill="#20372F">AI 翻译当前块，保留内容结构</text>
+<text x="82" y="882.4" font-size="22" font-weight="400" fill="#20372F">写译文 + 独立 meta 观察文件</text>
+<polyline points="270,910 270,944" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="270.0,944.0 264.0,932.5 276.0,932.5" fill="#81958A"/>
+<rect x="510" y="766" width="420" height="144" rx="15" fill="#EAF4EE" stroke="#287150" stroke-width="2"/>
+<text x="532" y="809.0" font-size="25" font-weight="700" fill="#287150">子代理 B · chunk0002</text>
+<text x="532" y="849.4" font-size="22" font-weight="400" fill="#20372F">AI 翻译当前块，保留内容结构</text>
+<text x="532" y="882.4" font-size="22" font-weight="400" fill="#20372F">写译文 + 独立 meta 观察文件</text>
+<polyline points="720,910 720,944" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="720.0,944.0 714.0,932.5 726.0,932.5" fill="#81958A"/>
+<rect x="960" y="766" width="420" height="144" rx="15" fill="#EAF4EE" stroke="#287150" stroke-width="2"/>
+<text x="982" y="809.0" font-size="25" font-weight="700" fill="#287150">子代理 … · chunkNNNN</text>
+<text x="982" y="849.4" font-size="22" font-weight="400" fill="#20372F">AI 翻译当前块，保留内容结构</text>
+<text x="982" y="882.4" font-size="22" font-weight="400" fill="#20372F">写译文 + 独立 meta 观察文件</text>
+<polyline points="1170,910 1170,944" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="1170.0,944.0 1164.0,932.5 1176.0,932.5" fill="#81958A"/>
+<text x="60" y="986.0" font-size="25" font-weight="700" fill="#81958A">03</text>
+<text x="113" y="986.6" font-size="28" font-weight="700" fill="#20372F">反馈与状态记录</text>
+<text x="580" y="984.5" font-size="21" font-weight="400" fill="#627269">先记录本批次状态，再合并观察与更新术语</text>
+<rect x="60" y="1015" width="420" height="150" rx="15" fill="#EAF4EE" stroke="#287150" stroke-width="2"/>
+<text x="82" y="1058.9" font-size="26" font-weight="700" fill="#287150">术语观察与冲突</text>
+<text x="82" y="1098.4" font-size="22" font-weight="400" fill="#20372F">新实体 / 别名 / 证据</text>
+<text x="82" y="1131.4" font-size="22" font-weight="400" fill="#20372F">主代理判断，脚本合并</text>
+<rect x="510" y="1015" width="420" height="150" rx="15" fill="#FFF3DF" stroke="#956222" stroke-width="2"/>
+<text x="532" y="1058.9" font-size="26" font-weight="700" fill="#956222">glossary.json</text>
+<text x="532" y="1098.4" font-size="22" font-weight="400" fill="#20372F">规范译名、别名与术语约定</text>
+<text x="532" y="1131.4" font-size="22" font-weight="400" fill="#20372F">主代理统一写入共享词表</text>
+<rect x="960" y="1015" width="420" height="150" rx="15" fill="#FFF3DF" stroke="#956222" stroke-width="2"/>
+<text x="982" y="1058.9" font-size="26" font-weight="700" fill="#956222">run_state.json</text>
+<text x="982" y="1098.4" font-size="22" font-weight="400" fill="#20372F">源文 / 译文 / 所用术语哈希</text>
+<text x="982" y="1131.4" font-size="22" font-weight="400" fill="#20372F">续跑与后续局部重译的依据</text>
+<polyline points="480,1080 503,1080" fill="none" stroke="#956222" stroke-width="3"/>
+<polygon points="503.0,1080.0 491.5,1086.0 491.5,1074.0" fill="#956222"/>
+<polyline points="1380,1100 1412,1100 1412,605 1387,605" fill="none" stroke="#956222" stroke-width="3" stroke-dasharray="8 8"/>
+<polygon points="1387.0,605.0 1398.5,599.0 1398.5,611.0" fill="#956222"/>
+<text x="60" y="1211.2" font-size="23" font-weight="400" fill="#956222">反馈用于后续批次；已有块是否重译，由后续规划判断。共享状态由主代理统一写入。</text>
+<polyline points="720,1225 720,1260" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="720.0,1260.0 714.0,1248.5 726.0,1248.5" fill="#81958A"/>
+<text x="60" y="1301.0" font-size="25" font-weight="700" fill="#81958A">04</text>
+<text x="113" y="1301.6" font-size="28" font-weight="700" fill="#20372F">校验与交付</text>
+<text x="580" y="1299.5" font-size="21" font-weight="400" fill="#627269">先检查文件与结构，再合并和重建排版</text>
+<rect x="60" y="1330" width="625" height="141" rx="15" fill="#EEF3FA" stroke="#416B9C" stroke-width="2"/>
+<text x="82" y="1373.9" font-size="26" font-weight="700" fill="#416B9C">脚本校验</text>
+<text x="82" y="1413.4" font-size="22" font-weight="400" fill="#20372F">缺块 / 空白 / 源文变化 / 图片引用异常</text>
+<text x="82" y="1446.4" font-size="22" font-weight="400" fill="#20372F">不能证明没有漏译、误译或风格偏差</text>
+<rect x="755" y="1330" width="625" height="141" rx="15" fill="#EEF3FA" stroke="#416B9C" stroke-width="2"/>
+<text x="777" y="1373.9" font-size="26" font-weight="700" fill="#416B9C">合并 → Pandoc / Calibre</text>
+<text x="777" y="1413.4" font-size="22" font-weight="400" fill="#20372F">Markdown → 带目录 HTML → DOCX / EPUB / PDF</text>
+<text x="777" y="1446.4" font-size="22" font-weight="400" fill="#20372F">输出重新排版，不保证原书版式复刻</text>
+<polyline points="685,1400 747,1400" fill="none" stroke="#81958A" stroke-width="3"/>
+<polygon points="747.0,1400.0 735.5,1406.0 735.5,1394.0" fill="#81958A"/>
+<rect x="60" y="1507" width="1320" height="110" rx="15" fill="#FFFFFF" stroke="#87988C" stroke-width="2" stroke-dasharray="9 9"/>
+<text x="82" y="1546.0" font-size="25" font-weight="700" fill="#20372F">对我们的衔接 · 下游建议，尚未实现</text>
+<text x="82" y="1589.0" font-size="25" font-weight="400" fill="#20372F">001 外刊来源 → 本项目翻译处理架构 → 双语对齐 → 精读、笔记与复习</text>
+<text x="60" y="1672.5" font-size="21" font-weight="400" fill="#627269">研究边界：只做源码架构梳理，未运行整本书翻译，未测评质量 / 速度 / 成本；本项目无 Web 部署。</text>
+</g></svg>
