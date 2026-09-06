@@ -2,9 +2,9 @@
 
 > 给主题和内容，选一个画风，再交给生图工具：用文章配图、习惯三格和茶会主视觉三个真实样例，理解 216 款风格目录如何用于创作。
 
-[返回总索引](../../README.md#项目索引) · [上游项目](https://github.com/yang0/handraw-style) · [源码与验证笔记](./notes/README.md) · [对照实验方案](./notes/experiment-plan.md)
+[返回总索引](../../README.md#项目索引) · [在线体验](https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/) · [上游项目](https://github.com/yang0/handraw-style) · [源码与验证笔记](./notes/README.md) · [对照实验方案](./notes/experiment-plan.md)
 
-[![三个真实场景总览：文章配图、日常习惯三格、茶会主视觉，展示主题内容、风格编号、实际效果与使用路径](./assets/scenario-overview.png)](#三个真实使用样例)
+[![三个真实场景总览：文章配图、日常习惯三格、茶会主视觉，展示主题内容、风格编号、实际效果与使用路径](./assets/scenario-overview.png)](https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/#examples)
 
 **先看效果，再带入自己的任务。** 总览中的图片是本次实际生成的首轮结果。下面可打开三份原图、查看输入与偏差；交互网页还提供风格图库与主题／内容编辑器。
 
@@ -20,7 +20,7 @@
 
 ## 三个真实使用样例
 
-三个场景分别对应文章发布、系列选型和活动宣传。点击表中的 PNG 查看完整结果；提示词和检查记录与原图一同保存。
+三个场景分别对应文章发布、系列选型和活动宣传。打开[在线实际样例](https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/#examples)查看效果与下载入口，或点击表中的 PNG 查看完整结果；提示词和检查记录与原图一同保存。
 
 | 场景 | 选用风格 | 实际输出 | 如何使用 |
 | --- | --- | --- | --- |
@@ -51,7 +51,7 @@
 
 图库参考图是上游内容；新增“实际样例”区展示本次生成的三张场景图，二者分别标注。下方任务编辑器供调整需求，不会随参数实时重画。原有能力、决策逻辑和项目比较保留在折叠区。
 
-启动后可打开[本地研究网页](http://127.0.0.1:4319/projects/010-handraw-style/)。该地址只在本机预览服务运行时有效，尚未部署验证。构建、运行与检查方法见 [Web 说明](./web/README.md)，交互验证见[网页验证记录](./notes/web-verification.md)。
+已于 2026-09-06 发布并验证[公开研究网页](https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/)。本地开发启动后，也可打开[本地预览](http://127.0.0.1:4319/projects/010-handraw-style/)；该地址只在本机服务运行时有效。构建、运行与检查方法见 [Web 说明](./web/README.md)，交互验证见[网页验证记录](./notes/web-verification.md)。
 
 ## 研究版本
 

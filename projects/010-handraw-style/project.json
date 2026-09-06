@@ -11,7 +11,7 @@
     "Skill",
     "轻量研究"
   ],
-  "demo": "",
+  "demo": "https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/",
   "cover": "assets/scenario-overview.png",
   "coverAlt": "三个真实场景总览：文章配图、习惯三格、茶会主视觉，包含输入、风格编号、实际效果与使用路径"
 }

@@ -1,6 +1,6 @@
 # handraw-style 中文能力研究网页
 
-[返回研究概览](../README.md) · [验证记录](../notes/web-verification.md)
+[返回研究概览](../README.md) · [在线体验](https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/) · [验证记录](../notes/web-verification.md)
 
 ## 页面内容
 
@@ -36,6 +36,8 @@ node projects/010-handraw-style/web/preview.mjs
 
 ## 发布与验证
 
-publish.json 已按仓库契约登记，使用相对资源路径，部署时稳定子路径为 /0905_codex_project/projects/010-handraw-style/。目前没有进行线上部署验证，demo 保持空值。
+publish.json 已按仓库契约登记，使用相对资源路径，稳定子路径为 /0905_codex_project/projects/010-handraw-style/。2026-09-06 已通过 GitHub Pages 工作流部署并完成线上验证，demo 已填写实际公开地址。
+
+overview.html 是 README 单张概述图的固定排版源，画布为 1600×1080，嵌入三张原始生成结果；交互入口仍为 index.html。公开样例直接加载原始 PNG，三张合计约 6.3 MB，慢速网络首次加载可能较长；原文件与散列保留，不以压缩版替换下载结果。
 
 检查包括 JavaScript 语法、全站构建与链接、能力切换、决策分支、自定义请求与复制、空输入、桌面与窄屏布局。详情见[验证记录](../notes/web-verification.md)。

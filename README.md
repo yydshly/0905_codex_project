@@ -26,7 +26,7 @@
 | 007 | [dzhng/skills 可验证工程工作流研究](./projects/007-dzhng-skills/README.md) | 完整说明 22 个 Skill 的能力、案例与调用时机，用总览图梳理主流程与按需分支，并评估模型增强后的价值 | Agent 工作流 / 技能编排 / 工程验证 | 已完成 | [源码](<https://github.com/dzhng/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/007-dzhng-skills/>) |
 | 008 | [白板知识视频制作工作流](./projects/008-whiteboard-book-video-skill/README.md) | 将笔记、观点和教程制作成白板讲解视频：提供叙事与视觉规范、字幕生成脚本和本地装配方法，适用于知识科普、项目导读与培训 | 多模态工作流 / 知识视频 / Agent Skill | 已完成 | [源码](<https://github.com/nutllwhy/whiteboard-book-video-skill>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/008-whiteboard-book-video-skill/>) |
 | 009 | [界面设计与审查 Skills 工作流研究](./projects/009-jakubkrehel-skills/README.md) | 实测界面修复收益有限，尚无 Skill 增量效果证据；借鉴其规则与验证流程，沉淀约束模型的自有网页优化能力 | Agent Skills / 界面设计 / 质量审查 | 已完成 | [源码](<https://github.com/jakubkrehel/skills>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/009-jakubkrehel-skills/>) |
-| 010 | [handraw-style 视觉风格目录与提示词研究](./projects/010-handraw-style/README.md) | 给主题与内容、选风格，再交给生图工具：以文章配图、习惯三格和茶会主视觉三个真实结果，说明 216 款风格目录的使用方法与边界。 | 视觉风格 / 提示词 / Skill / 轻量研究 | 已完成 | [源码](<https://github.com/yang0/handraw-style>) | — |
+| 010 | [handraw-style 视觉风格目录与提示词研究](./projects/010-handraw-style/README.md) | 给主题与内容、选风格，再交给生图工具：以文章配图、习惯三格和茶会主视觉三个真实结果，说明 216 款风格目录的使用方法与边界。 | 视觉风格 / 提示词 / Skill / 轻量研究 | 已完成 | [源码](<https://github.com/yang0/handraw-style>) | [在线体验](<https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/>) |
 <!-- PROJECT_INDEX:END -->
 
 ## 项目预览
@@ -102,7 +102,7 @@ https://github.com/user-attachments/assets/541c7a53-71cc-46d5-b9fe-ed5ffcb2eef8
 
 给主题与内容、选风格，再交给生图工具：以文章配图、习惯三格和茶会主视觉三个真实结果，说明 216 款风格目录的使用方法与边界。
 
-[研究详情](./projects/010-handraw-style/README.md)
+[研究详情](./projects/010-handraw-style/README.md) · [在线体验](<https://yydshly.github.io/0905_codex_project/projects/010-handraw-style/>)
 <!-- PROJECT_GALLERY:END -->
 
 ## 仓库结构
