@@ -1,0 +1,17 @@
+{
+  "id": 10,
+  "slug": "handraw-style",
+  "name": "handraw-style 视觉风格目录与提示词研究",
+  "summary": "给主题与内容、选风格，再交给生图工具：以文章配图、习惯三格和茶会主视觉三个真实结果，说明 216 款风格目录的使用方法与边界。",
+  "source": "https://github.com/yang0/handraw-style",
+  "status": "completed",
+  "tags": [
+    "视觉风格",
+    "提示词",
+    "Skill",
+    "轻量研究"
+  ],
+  "demo": "",
+  "cover": "assets/scenario-overview.png",
+  "coverAlt": "三个真实场景总览：文章配图、习惯三格、茶会主视觉，包含输入、风格编号、实际效果与使用路径"
+}

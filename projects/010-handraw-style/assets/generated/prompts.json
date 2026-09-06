@@ -1,0 +1,41 @@
+[
+  {
+    "id": "article",
+    "file": "article-reading-v1.png",
+    "ref": "003",
+    "prompt": "制作一张可用于读书文章的横版插画，目标画幅16:9。风格索引：handraw-style #003，生图名称 Fine-Line Urban Miniature，参考名称 Jean-Jacques Sempé。附图只用作视觉风格参考，借鉴细线条、淡彩与留白；忽略参考图里的原人物、城市街道、动作、构图、编号、边框和文字，不复制原图内容。新的主题是：一个成年人坐在家中大窗边的椅子上安静读书，桌上有一杯茶，窗外有一株小树。人物是环境中的小主角，画面让人感到安静和轻松。上方留出一块干净区域供文章后期排标题，图中不含任何文字、编号、署名、水印或参考图边框。输出一张完整的实际插画，不要设备样机或网页截图。",
+    "tool": "built-in image_gen",
+    "reference_used": true,
+    "source": "https://github.com/yang0/handraw-style/blob/e51f4f8b9edfd8d2f83e18a4a8eecc6dd5db51a7/images/individual/003.png",
+    "output": "article-reading-v1.png",
+    "run_date": "2026-09-06",
+    "model_identifier": "not returned",
+    "scope": "按编号参考图进行的三场景改编生成；未安装上游 Skill 或执行其路径脚本"
+  },
+  {
+    "id": "series",
+    "file": "habits-triptych-v1.png",
+    "ref": "013",
+    "prompt": "制作一张三格并排的日常习惯系列卡片草案，整体横版2:1，三格等宽，一次输出完整三格图。风格索引：handraw-style #013，生图名称 Bold Flat Everyday Satire，参考名称 Jean Jullien。附图只作为视觉风格参考，借鉴粗黑轮廓、简练人物和平涂色块；忽略参考图中冲浪者的身份、冲浪板、手势、海滩含义、编号、文字与边框，不照搬其主体或构图。三格分别表现：第一格一个短黑发成年人在公园散步；第二格同一个人在家里做饭；第三格同一个人坐在灯下读书。共同角色穿蓝绿色上衣，三格保持共同配色与相近线条粗细，背景只保留辨认场景需要的少量物件，画面温暖、轻松。三格之间用干净留白分隔，每格主体清楚。整张图不包含文字、编号、署名、水印。这是一个系列的同图概念草案，不要画成网页、手机或实体样机。",
+    "tool": "built-in image_gen",
+    "reference_used": true,
+    "source": "https://github.com/yang0/handraw-style/blob/e51f4f8b9edfd8d2f83e18a4a8eecc6dd5db51a7/images/individual/013.png",
+    "output": "habits-triptych-v1.png",
+    "run_date": "2026-09-06",
+    "model_identifier": "not returned",
+    "scope": "按编号参考图进行的三场景改编生成；未安装上游 Skill 或执行其路径脚本"
+  },
+  {
+    "id": "event",
+    "file": "weekend-tea-v1.png",
+    "ref": "193",
+    "prompt": "制作一张“周末茶会”活动主视觉草图，竖版4:5。风格索引：handraw-style #193，生图名称 Cantonese Dim-Sum Guochao，参考名称 广式早茶国潮。附图只作为风格参考，借鉴手绘线条、装饰性平涂、暖橙与青绿色以及茶点文化视觉语言；忽略原图女性的身份、吃包子的姿势、原图构图、文字、编号和边框。新画面内容：三位成年朋友围坐在圆桌旁喝茶聊天，桌上有茶壶、茶杯和几盘点心，室内有绿植，表现热闹又放松的小型聚会。画面顶部清楚写中文主标题“周末茶会”，仅这四个字；标题醒目、端正可读。底部留出干净区域，方便之后添加实际日期和地点，现在不要编造任何日期、地点、报名方式或二维码。不要署名、水印、编号或参考图边框。输出完整平面活动主视觉，不要设备或印刷样机。",
+    "tool": "built-in image_gen",
+    "reference_used": true,
+    "source": "https://github.com/yang0/handraw-style/blob/e51f4f8b9edfd8d2f83e18a4a8eecc6dd5db51a7/images/individual/193.png",
+    "output": "weekend-tea-v1.png",
+    "run_date": "2026-09-06",
+    "model_identifier": "not returned",
+    "scope": "按编号参考图进行的三场景改编生成；未安装上游 Skill 或执行其路径脚本"
+  }
+]

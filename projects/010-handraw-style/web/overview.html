@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>handraw-style · 三个真实场景总览</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f2e9;color:#233e34;font-family:"Microsoft YaHei","PingFang SC",sans-serif}main{width:1600px;height:1080px;padding:38px 44px;overflow:hidden}header{height:120px;display:flex;justify-content:space-between;align-items:flex-start}.eyebrow{font-size:18px;letter-spacing:2px;color:#65736a;margin:0 0 12px}h1{font-size:44px;line-height:1.3;letter-spacing:-1px;margin:0;font-weight:700}.badge{border:1px solid #b9c4b7;border-radius:60px;padding:12px 20px;font-size:18px;margin-top:32px}.flow{height:76px;border-top:1px solid #cbd0c1;border-bottom:1px solid #cbd0c1;display:flex;align-items:center;justify-content:space-between;font-size:23px}.flow b{font-weight:600}.flow span{color:#87927a}.flow small{font-size:17px;color:#617363}.scenes{display:grid;grid-template-columns: 936px 552px;grid-template-rows:326px 326px;gap:24px;margin-top:26px}article{border:1px solid #d5dacb;background:#fffef8;border-radius:18px;overflow:hidden}.landscape{display:grid;grid-template-columns:292px 1fr;grid-template-rows:minmax(0,1fr);align-items:stretch}.copy{padding:27px 24px;display:flex;flex-direction:column}.tag{font-size:16px;letter-spacing:1px;color:#758171;margin:0 0 14px}h2{font-size:30px;line-height:1.3;margin:0 0 15px}p{font-size:19px;line-height:1.65;margin:0;color:#5b6a5f}.style{font-size:18px;color:#40634e;margin-bottom:12px}.use{margin-top:auto;font-size:18px;font-weight:600;color:#315442}.picture{min-height:0;min-width:0;padding:14px;display:flex;align-items:center;justify-content:center;background:#f0efe6}.picture img{width:100%;height:100%;object-fit:contain;min-width:0;min-height:0}.poster{grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column}.poster .top{padding:23px 28px 15px;display:flex;align-items:center;justify-content:space-between}.poster .tag{margin:0 0 8px}.poster h2{margin:0;font-size:29px}.poster .style{margin:0;text-align:right;font-size:17px;line-height:1.6}.poster .picture{height:454px;flex-shrink:0}.poster .bottom{padding:17px 28px}.poster .bottom p{font-size:18px;line-height:1.6}.poster .use{margin-top:8px}footer{margin-top:23px;display:flex;justify-content:space-between;gap:24px;border-top:1px solid #cbd0c1;padding-top:17px;font-size:16px;color:#637060;line-height:1.6}footer strong{color:#365341;font-weight:600}.link{white-space:nowrap;font-size:18px}
+</style>
+</head>
+<body><main>
+<header><div><p class="eyebrow">开源研究室 / 010 · HANDRAW-STYLE</p><h1>选一种画风，把你的内容变成可用的配图。</h1></div><div class="badge">216 个风格入口 · 3 个真实样例</div></header>
+<div class="flow"><b>① 给主题与内容</b><span>→</span><b>② 选编号风格</b><span>→</span><b>③ 在生图环境生成</b><span>→</span><b>④ 检查、排版、使用</b><small>网页提供选型与任务整理</small></div>
+<section class="scenes" aria-label="三个实际生成场景">
+<article class="landscape"><div class="copy"><div class="tag">01 / 文章配图</div><h2>每天读一页</h2><div class="style">#003 · 细线城市小景</div><p>窗边阅读的人、一杯茶。<br>画面留白，不写字。</p><div class="use">用于文章首图、正文插图 ↗</div></div><div class="picture"><img src="generated/article-reading-v1.png" alt="实际生成的窗边读书文章配图，保留完整原图"></div></article>
+<article class="landscape"><div class="copy"><div class="tag">02 / 系列内容</div><h2>三个日常小习惯</h2><div class="style">#013 · 粗线平涂人物</div><p>散步、做饭、读书。<br>共同人物与配色。</p><div class="use">用于三格插图、系列选型 ↗</div></div><div class="picture"><img src="generated/habits-triptych-v1.png" alt="实际生成的散步、做饭、读书三格草案，保留完整原图"></div></article>
+<article class="poster"><div class="top"><div><div class="tag">03 / 活动主视觉</div><h2>周末茶会</h2></div><div class="style">#193<br>广式早茶国潮</div></div><div class="picture"><img src="generated/weekend-tea-v1.png" alt="实际生成的周末茶会主视觉，保留完整原图"></div><div class="bottom"><p>三位朋友、茶与点心；标题入画，底部留白。</p><div class="use">补真实日期地点，适配活动宣传版式 ↗</div></div></article>
+</section>
+<footer><div><strong>本次首轮真实生成，非上游示例。</strong>以编号参考图配合生图工具完成，未完整执行上游 Skill。<br>部分画幅、细节存在偏差；三格图不证明跨次角色一致。原图、提示词与检查记录均保留。</div><div class="link">点击 README 中的总览图<br><strong>看场景、选画风、整理自己的任务 ↗</strong></div></footer>
+</main></body></html>

@@ -1,0 +1,23 @@
+[
+  {
+    "file": "article-reading-v1.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1797521,
+    "sha256": "750c273ca21a53a69b0111b499f897bf4654ea0d9bdcce9a6b2d7950484063d5"
+  },
+  {
+    "file": "habits-triptych-v1.png",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 1629254,
+    "sha256": "01065dcb402ada2ab7e6132d2db3ad7e05330fdb51cf581b504eae4aba169116"
+  },
+  {
+    "file": "weekend-tea-v1.png",
+    "width": 1003,
+    "height": 1568,
+    "bytes": 2906613,
+    "sha256": "ea025c0a881e832e022cfc8e249cdad4fac12fff162ae87b7c6a679df244587b"
+  }
+]
